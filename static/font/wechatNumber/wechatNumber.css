@@ -1,0 +1,8 @@
+
+@font-face {
+    font-family: 'WeChatNumber-151125';
+    src: url('@/static/font/wechatNumber/WeChatNumber-151125.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+

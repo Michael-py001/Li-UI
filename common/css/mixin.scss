@@ -1,0 +1,30 @@
+@charset "utf-8";
+// 苹果安全底部高度
+@mixin saveBottom($default:'0rpx') {
+  padding-bottom: calc(#{$default} + #{env(safe-area-inset-bottom)});
+}
+// 单行省略号
+@mixin lineClamp() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+// 多行省略号
+@mixin multiLineOmit($num:2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $num;
+  -webkit-box-orient: vertical;
+}
+@mixin ellipsis($lineClamp: 1) {
+		text-overflow: -o-ellipsis-lastline;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: $lineClamp;
+		line-clamp: $lineClamp;
+		-webkit-box-orient: vertical;
+		word-break: break-word;
+	}

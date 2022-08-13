@@ -1,0 +1,45 @@
+.wechat {
+  font-family: WeChatNumber-151125, WeChatNumber-151125-Medium !important;
+}
+.flex-1 {
+  flex: 1;
+}
+.ml-6 {
+  margin-left: 6rpx;
+}
+.ml-10 {
+  margin-left: 10rpx;
+}
+
+.mr-6 {
+  margin-right: 6rpx;
+}
+.mr-10 {
+  margin-right: 10rpx;
+}
+
+.flex-cc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes animate {
+	from {
+		background-color: #EFEFEF !important;
+    opacity: 1;
+	}
+
+	to {
+		background-color: #fff !important;
+    opacity: .5;
+	}
+}
+
+.my-animete {
+	animation-name: animate;
+	animation-duration: 0.6s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
