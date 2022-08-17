@@ -104,69 +104,78 @@ for (let index in routes) {
 
 const _nav = (route_name, query = {}, open_type = '') => {
 	return new Promise((resolve, reject) => {
-		route_name = route_name.toLowerCase()
-		//加入点击防抖，防止卡顿时候出现多次跳转
-		throttle(() => {
-			// 判断是否为后退
-			if (route_name === 'back' || open_type === 'navigateBack') {
-				const delta = JSON.stringify(query) === JSON.stringify({}) ? 1 : query
-				uni.navigateBack({
-					delta,
-					success: () => {
-						resolve('success')
-					},
-					fail: () => {
-						resolve('fail')
-					}
-				})
-				return
-			}
-			const {
-				type = '',
-					url
-			} = _route[route_name]
-			let routerQuery = _route[route_name].query || {}
-			// query参数拼接
-			let queryObj = {
-				...routerQuery,
-				...query
-			}
-			let queryList = []
-			for (let i in queryObj) {
-				queryList.push(`${i}=${queryObj[i]}`)
-			}
-			// 打开类型，优先级为$nav->routerConfig.openType
-			const _openType = type || open_type || 'navigateTo'
-			// 和页面参数拼凑后的url
-			const queryUrl = _openType === 'switchTab' ? url : `${url}?${queryList.join('&')}`
-			// 根据打开类型执行打开页面，switchTab不允许添加参数
-			let object = {
-				url: queryUrl,
-				success: () => {
-					resolve('success')
-				},
-				fail: () => {
-					resolve('fail')
-				}
-			}
-			switch (_openType) {
-				case 'navigateTo':
-					uni.navigateTo(object)
-					break;
-				case 'switchTab':
-					uni.switchTab(object)
-					break;
-				case 'redirectTo':
-					uni.redirectTo(object)
-					break;
-				case 'reLaunch':
-					uni.reLaunch(object)
-					break;
-				default:
-					uni.navigateTo(object)
-					break;
-			}
-		}, 1000) //一秒钟的防抖
+    try{
+      route_name = route_name.toLowerCase()
+      //加入点击防抖，防止卡顿时候出现多次跳转
+      throttle(() => {
+      	// 判断是否为后退
+      	if (route_name === 'back' || open_type === 'navigateBack') {
+      		const delta = JSON.stringify(query) === JSON.stringify({}) ? 1 : query
+      		uni.navigateBack({
+      			delta,
+      			success: () => {
+      				resolve('success')
+      			},
+      			fail: () => {
+      				resolve('fail')
+      			}
+      		})
+      		return
+      	}
+      	const {
+      		type = '',
+      			url
+      	} = _route[route_name]
+      	let routerQuery = _route[route_name].query || {}
+      	// query参数拼接
+      	let queryObj = {
+      		...routerQuery,
+      		...query
+      	}
+      	let queryList = []
+      	for (let i in queryObj) {
+      		queryList.push(`${i}=${queryObj[i]}`)
+      	}
+      	// 打开类型，优先级为$nav->routerConfig.openType
+      	const _openType = type || open_type || 'navigateTo'
+      	// 和页面参数拼凑后的url
+      	const queryUrl = _openType === 'switchTab' ? url : `${url}?${queryList.join('&')}`
+        console.log("queryUrl:",queryUrl)
+      	// 根据打开类型执行打开页面，switchTab不允许添加参数
+      	let object = {
+      		url: queryUrl,
+      		success: () => {
+      			resolve('success')
+      		},
+      		fail: () => {
+      			resolve('fail')
+      		}
+      	}
+      	switch (_openType) {
+      		case 'navigateTo':
+      			uni.navigateTo(object)
+      			break;
+      		case 'switchTab':
+      			uni.switchTab(object)
+      			break;
+      		case 'redirectTo':
+      			uni.redirectTo(object)
+      			break;
+      		case 'reLaunch':
+      			uni.reLaunch(object)
+      			break;
+      		default:
+      			uni.navigateTo(object)
+      			break;
+      	}
+      }, 1000) //一秒钟的防抖
+    }catch(e){
+      console.log(e)
+      uni.showToast({
+        title:`${route_name.split('.')[1]}路由未注册`,
+        icon:'none'
+      })
+    }
 	})
 }
 

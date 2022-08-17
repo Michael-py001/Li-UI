@@ -12,6 +12,7 @@
           头像
         </view>
       </slot>
+      <u-icon name="arrow-right" size="30" color="#C4C4C4" v-if="showIcon"></u-icon>
     </view>
   </view>
 </template>
@@ -79,6 +80,9 @@
       },
       handleGetCodeFunc:{
         type:Function
+      },
+      showIcon:{ //显示右箭头
+        default:false
       }
     },
     data(){

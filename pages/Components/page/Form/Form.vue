@@ -7,19 +7,18 @@
           <view class="pix">cm</view>
         </template>
       </TextInput>
-      <TemplateSlot label="头像(插槽)" height="144rpx">
+      <TemplateSlot label="头像(插槽)" height="144rpx" showIcon>
         <view class="avatar-wrap">
           <button class="avatar" open-type="chooseAvatar" @chooseavatar="onChooseAvatar">
             <u-image width="120rpx" height="120rpx" radius="50%" :src="avatar?avatar:'/static/Main/default.png'" ></u-image>
           </button>
-          <u-icon name="arrow-right" size="30" color="#C4C4C4"></u-icon>
         </view>
       </TemplateSlot>
       <ChoosePopup height="114rpx" :list="sexList" label="性别" labelWidth="230"  holderPlaceText="请选择性别" v-model="sex" ></ChoosePopup>
       <ChoosePopup height="114rpx"  mode="date" label="选择时间" labelWidth="230"  holderPlaceText="请选择时间" v-model="date" @confirm="confirmTime"></ChoosePopup>
       <ChooseNumber label="预估重量(Kg)" height="114rpx" labelWidth="230" v-model="weight"></ChooseNumber>
       <TextInput label="手机号" height="114rpx" labelWidth="230"  holderPlaceText="请输入手机号" type="number" v-model="phone" :handleGetCodeFunc="handleGetCodeFunc" mode="getCode" ></TextInput>
-      <AddressSelect label="详细地址"  :border="true" labelWidth="190" :disabled="false" holderPlaceText="请选择详细地址" @comfirm="comfirmAddress"></AddressSelect>
+      <AddressSelect label="详细地址" height="114rpx" :border="true" labelWidth="190" :disabled="false" holderPlaceText="请选择详细地址" @comfirm="comfirmAddress"></AddressSelect>
       <ChooseExpressTime shake label="期望上门时间" labelWidth="230" :value="expressTime" @change="expressTimeChange"></ChooseExpressTime>
        <ChooseImages direction="column" :border="true" label="上传截图(纵向)" labelWidth="230" deleteIconType='two' :limitNum="5"  v-model="imgList"></ChooseImages>
         <ChooseImages  :border="true" label="上传截图(横向)" labelWidth="230" deleteIconType='two' :limitNum="5"  v-model="imgList"></ChooseImages>

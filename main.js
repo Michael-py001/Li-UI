@@ -59,6 +59,14 @@ export function createApp() {
 	}))
   app.use(Pinia.createPinia());
   app.use(uView);
+  // 设置默认圆角24rpx
+  uni.$u.setConfig({
+    props:{
+      popup:{
+        round:'24rpx'
+      }
+    }
+  })
   uni.$u.config.unit = 'rpx'
   app.use(Interactive);
   app.use(Storage);

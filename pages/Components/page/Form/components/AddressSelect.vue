@@ -69,6 +69,9 @@
       padding:{
         default:'0 24rpx'
       },
+      height:{
+        default:'100rpx'
+      },
     },
     data(){
       return {
@@ -200,7 +203,6 @@
   }
   .form{
     &-input {
-      margin-bottom: 24rpx;
       height: 100rpx;
       width: 100%;
       display: flex;
@@ -222,6 +224,7 @@
           width: 430rpx;
           height: 90rpx;
           padding: 5rpx;
+          padding-top: 7rpx;
         }
       }
      

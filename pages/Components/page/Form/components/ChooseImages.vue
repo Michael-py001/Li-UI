@@ -8,24 +8,22 @@
         <template v-if="imgList.length>0">
           <view class="img-wrap" v-for="(item,index) in imgList" :key="index">
             <image class="img" :src="item" mode="aspectFill" @click.stop="previewImg(index,imgList)"></image>
-            <image :src="`/static/Form/ChooseImages/${deleteIconType=='one'?'close':'close2'}.png`" mode="aspectFill" class="delete" :class="{'delete2':deleteIconType!='one'}" @click="deleteImg(index)">
+            <image :src="`/static/Form/ChooseImages/${deleteIconType=='one'?'close':'close2'}.png`" mode="aspectFill" class="delete" :class="{'delete2':deleteIconType!='one'}" @click="deleteImg(index)" v-if="!disabled">
             </image>
           </view>
           <image class="img" src="/static/Form/ChooseImages/add.png" mode="aspectFill" @click="chooseImg"
             v-if="imgList.length<limitNum"></image>
         </template>
-        <template v-if="imgList.length==0">
+        <template v-if="imgList.length==0 && !disabled ">
           <view class="img-wrap">
             <image class="img" src="/static/Form/ChooseImages/add.png" mode="aspectFill" @click="chooseImg"></image>
           </view>
-
         </template>
       </view>
       <view class="imgs" v-if="noEditValue">
         <view class="img-wrap" v-for="(item,index) in noEditValue" :key="index">
           <image class="img" :src="item" mode="aspectFill" @click.stop="previewImg(index,noEditValue)"></image>
         </view>
-
       </view>
     </view>
   </view>
@@ -33,7 +31,7 @@
 
 <script>
   /**
-   * <ChooseImages label="站点图片" labelWidth="230" :imgList.sync="imgList"></ChooseImages>
+   * <ChooseImages  :border="true" label="上传截图(横向)" labelWidth="230" deleteIconType='two' :limitNum="5"  v-model="imgList"></ChooseImages>
    * 
    * imgList:[],//图片
    * 
@@ -72,6 +70,9 @@
       },
       modelValue:{
         default:()=>([])
+      },
+      disabled:{ //禁用，隐藏上传按钮,删除按钮
+        default:false
       }
     },
     data() {
@@ -169,7 +170,7 @@
         })
       },
       chooseImg(index) {
-
+        if(this.disabled) return
         this.ChooseImage({
           count: this.limitNum - this.imgList.length
         }).then(async res => {

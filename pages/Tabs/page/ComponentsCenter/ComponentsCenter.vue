@@ -1,23 +1,20 @@
 <template>
   <view class="ComponentsCenter">
     <view class="box">
-      <view class="title">
-        基础组件
-      </view>
+      <Title name="基础组件"></Title>
     </view>
     <view class="box">
-      <view class="title">
-        表单组件
-      </view>
-      <view class="item" @click="$nav('Components.Form')">
-        Form表单
-      </view>
+      <Title name="表单组件"></Title>
+      <Item name="Form表单" url="Components.Form"></Item>
+      <Item name="时间选择器" url="Components.TimeSelect"></Item>
     </view>
   </view>
 </template>
 
 <script setup>
   import {nav} from '@/pages/index.js'
+  import Title from '@/components/MainUI/Title.vue'
+  import Item from '@/components/MainUI/Item.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -31,7 +28,7 @@
         color: #333;
         position: relative;
         z-index: 1;
-        margin-bottom: 24rpx;
+        margin-bottom: 36rpx;
         &::before {
           content: '';
           position: absolute;
@@ -45,6 +42,7 @@
         }
       }
       .item {
+        margin-bottom: 24rpx;
         display: flex;
         justify-content: center;
         align-items: center;

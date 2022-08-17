@@ -86,7 +86,6 @@
   .form{
     &-form {
       &-input {
-        margin-bottom: 24rpx;
         height: 100rpx;
         width: 100%;
         display: flex;
