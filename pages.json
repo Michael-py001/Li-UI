@@ -31,6 +31,13 @@
         "enablePullDownRefresh": false
       }
 
+    }, {
+      "path": "Tabs/Tabs",
+      "style": {
+        "navigationBarTitleText": "Tabs标签",
+        "enablePullDownRefresh": false
+      }
+
     }]
   }],
   "easycom": {

@@ -1,4 +1,5 @@
 export default {
   Form:{},
-  TimeSelect:{}
+  TimeSelect:{},
+  Tabs:{}
 }

@@ -8,6 +8,10 @@
       <Item name="Form表单" url="Components.Form"></Item>
       <Item name="时间选择器" url="Components.TimeSelect"></Item>
     </view>
+    <view class="box">
+      <Title name="导航组件"></Title>
+      <Item name="Tabs标签" url="Components.Tabs"></Item>
+    </view>
   </view>
 </template>
 
