@@ -20,6 +20,7 @@
       <Title name="自定义背景色"></Title>
     </view>
     <TopTabs :list="titleList2" v-model="activeTab" tagColor="#55aaff"  fontColor="#4aa2ff" activeTextColor="#55aaff" bgColor="rgba(85, 170, 255,0.2)" height="100rpx" stopScroll></TopTabs>
+    
   </view>
 </template>
 

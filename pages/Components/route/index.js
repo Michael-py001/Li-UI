@@ -1,5 +1,6 @@
 export default {
   Form:{},
   TimeSelect:{},
-  Tabs:{}
+  Tabs:{},
+  NavBar:{}
 }

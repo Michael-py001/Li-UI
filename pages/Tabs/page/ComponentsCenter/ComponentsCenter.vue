@@ -11,6 +11,7 @@
     <view class="box">
       <Title name="导航组件"></Title>
       <Item name="Tabs标签" url="Components.Tabs"></Item>
+      <Item name="自定义导航栏" url="Components.NavBar"></Item>
     </view>
   </view>
 </template>

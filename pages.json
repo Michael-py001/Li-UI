@@ -38,6 +38,14 @@
         "enablePullDownRefresh": false
       }
 
+    }, {
+      "path": "NavBar/NavBar",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom"
+      }
+
     }]
   }],
   "easycom": {
