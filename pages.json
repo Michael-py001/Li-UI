@@ -60,7 +60,16 @@
         "enablePullDownRefresh": false
       }
 
-    }]
+    }    ,{
+                    "path" : "ConfirmPopup/ConfirmPopup",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "确认弹窗",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+            ]
   }],
   "easycom": {
     "autoscan": true,

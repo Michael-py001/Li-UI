@@ -15,6 +15,10 @@
       <Title name="其他组件"></Title>
       <Item name="PageEnd 列表页加载状态" url="Components.PageEnd"></Item>
     </view>
+    <view class="box">
+      <Title name="反馈组件"></Title>
+      <Item name="ConfirmPopup 确认弹窗组件" url="Components.ConfirmPopup"></Item>
+    </view>
   </view>
 </template>
 

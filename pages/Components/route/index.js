@@ -4,5 +4,6 @@ export default {
   Tabs:{},
   NavBar:{},
   PageEnd:{},
-  Rate:{}
+  Rate:{},
+  ConfirmPopup:{}
 }
