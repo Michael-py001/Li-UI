@@ -31,7 +31,6 @@ export function useListPage(params={}) {
       _is_loading = ref(false),
       _innerRequestParams = null,
       _innerRequest = null,
-      _limit = 20,
       _response = ref()
   
   const page_end_type = computed(()=>{

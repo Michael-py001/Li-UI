@@ -2,5 +2,7 @@ export default {
   Form:{},
   TimeSelect:{},
   Tabs:{},
-  NavBar:{}
+  NavBar:{},
+  PageEnd:{},
+  Rate:{}
 }

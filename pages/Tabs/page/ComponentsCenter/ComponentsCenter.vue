@@ -1,17 +1,19 @@
 <template>
   <view class="ComponentsCenter">
     <view class="box">
-      <Title name="基础组件"></Title>
-    </view>
-    <view class="box">
       <Title name="表单组件"></Title>
-      <Item name="Form表单" url="Components.Form"></Item>
-      <Item name="时间选择器" url="Components.TimeSelect"></Item>
+      <Item name="Form 表单" url="Components.Form"></Item>
+      <Item name="TimePicker 时间选择器" url="Components.TimeSelect"></Item>
+      <Item name="Rate 评分" url="Components.Rate"></Item>
     </view>
     <view class="box">
       <Title name="导航组件"></Title>
-      <Item name="Tabs标签" url="Components.Tabs"></Item>
-      <Item name="自定义导航栏" url="Components.NavBar"></Item>
+      <Item name="Tabs 标签" url="Components.Tabs"></Item>
+      <Item name="NavBar 自定义导航栏" url="Components.NavBar"></Item>
+    </view>
+    <view class="box">
+      <Title name="其他组件"></Title>
+      <Item name="PageEnd 列表页加载状态" url="Components.PageEnd"></Item>
     </view>
   </view>
 </template>
