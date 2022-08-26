@@ -1,9 +1,8 @@
 <template>
   <view class="Stars" :style="{'margin-top':marginTop}">
     <view class="flex-row">
-      <image :src="count(index)" :style="{'width':size+'rpx','height':size+'rpx'}" v-for="(item,index) in maxNum" :key="index"
+      <image :src="count(index)" :style="{'width':size+'rpx','height':size+'rpx','margin-right':gap + 'rpx'}" v-for="(item,index) in maxNum" :key="index"
         @click="select(innerActiveNum-index>0,index)" />
-        
     </view>
   </view>
 </template>
@@ -28,6 +27,9 @@
       },
       activeNum: {
         default: 0
+      },
+      gap:{
+        default:'8'
       },
       fillIcon:{
         default:'/static/Stars/star_fill.png'
