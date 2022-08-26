@@ -1,16 +1,16 @@
 import {onLoad, onPageScroll} from '@dcloudio/uni-app'
-export function useNavHeight() {
-   let navHeight = 95, // 默认高度 状态栏高度 + 内容高度
-      statusBarHeight = 40, // 状态栏高度
+export  function useNavHeight() {
+   let navHeight = $ref(95), // 默认高度 状态栏高度 + 内容高度
+      statusBarHeight = $ref(40), // 状态栏高度
       isNearTop = $ref(false),
-      gapHeight = 14,
-      btnHeight = 45
-  
-  const setData = ()=>{
+      gapHeight = $ref(14),
+      btnHeight = $ref(45)
+      
+  const setData = ()=> new Promise((resolve,reject)=>{
     uni.getSystemInfo({
     	success: res => {
         // #ifdef MP-WEIXIN
-        const btnInfo = wx.getMenuButtonBoundingClientRect()
+        const btnInfo = uni.getMenuButtonBoundingClientRect()
         // #endif
         // #ifndef MP-WEIXIN
         const btnInfo = {
@@ -22,15 +22,22 @@ export function useNavHeight() {
           width: 86,
         }
         // #endif
-        
-        let btnGapHeight = (btnInfo.top - statusBarHeight) * 2,//状态栏到胶囊的间距+胶囊到内容的间距
-        navHeight = gapHeight + btnHeight + statusBarHeight  //导航栏高度
+        statusBarHeight = res.statusBarHeight //状态栏高度
+        console.log("btnInfo--:",btnInfo)
+        let btnGapHeight = (btnInfo.top - statusBarHeight) * 2//状态栏到胶囊的间距+胶囊到内容的间距
         gapHeight = btnGapHeight<0?8:btnGapHeight
         btnHeight = btnInfo.height, //胶囊高度
-        statusBarHeight = res.statusBarHeight //状态栏高度
+        
+        navHeight = gapHeight + btnHeight + statusBarHeight  //导航栏高度
+        console.log("btnGapHeight:",btnGapHeight)
+        console.log("gapHeight:",gapHeight)
+        console.log("btnHeight:",btnHeight)
+        console.log("statusBarHeight:",statusBarHeight)
+        console.log("navHeight:",navHeight)
+        resolve()
     	}
     })
-  }
+  })
   const holdHeight = $computed(()=>{gapHeight + navHeight})
   onPageScroll((res)=>{
     isNearTop = res.scrollTop > gapHeight

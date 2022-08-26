@@ -71,14 +71,9 @@
         str += `height:${height}px`
         return str
       },
-      navStyle() {
-      	if (!this.showPlace) return ''
-      	let height = this.ispPlace? `height:${this.navHeight}px;` :''
-      	return `${height}`
-      },
 			customNavStyle() {
 				let bg = ''
-				let padding_top =  this.statusBarHeight 
+				let padding_top =  this.statusBarHeight
         let bgImage = ''
         let position = ''
 				if(this.isNearTop) {
@@ -107,7 +102,8 @@
           }
 				   
 				}
-         return `padding-bottom:${this.gapHeight}px; padding-top:${padding_top}px;height:${this.navHeight + this.gapHeight/2}px;${bg};`
+         // return `padding-top:${padding_top}px;height:${this.navHeight}px;${bg};`
+         return `padding-bottom:${this.gapHeight/2}px; padding-top:${padding_top}px;height:${this.navHeight + this.gapHeight/2}px;${bg};`
 			},
 		},
 		methods: {
