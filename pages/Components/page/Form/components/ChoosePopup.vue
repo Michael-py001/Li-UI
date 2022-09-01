@@ -157,7 +157,7 @@
           str +='border-bottom:  1rpx solid #E5E5E5;'
         }
         if(this.height) {
-          str += `height:${this.height}rpx;`
+          str += `height:${this.height};`
         }
         else {
           str = `justify-content: space-between;`
@@ -180,6 +180,9 @@
         else if(this.mode!='normal') { //赋值时间
           this.innerValue = value
         }
+        else {
+          this.innerValue = value
+        }
       },
       clickValue() {
         if(!this.disabled) {
@@ -187,7 +190,7 @@
             this.popupShow=true
           }
           else {
-             this.$emit('click')
+            this.$emit('click')
           }
         }
         else {
