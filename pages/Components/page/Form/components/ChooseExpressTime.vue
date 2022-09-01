@@ -1,20 +1,26 @@
 <template>
-  <view class="form" :style="{padding:padding}">
-    <view class="form-form-input" :style="formInputStyle">
-      <view class="label" :style="labelStyle">
-        {{label}}
-      </view>
-      <view class="value" @click="popupShow=true" v-if="!noEditValue">
-        <view class="name">
-          {{selectLabel?selectLabel:'请选择'}}
+  <view >
+    <view class="" @click="$refs.ExpressTimePicker.open()">
+      <slot>
+        <view class="form" :style="{padding:padding}" >
+          <view class="form-form-input" :style="formInputStyle">
+            <view class="label" :style="labelStyle">
+              {{label}}
+            </view>
+            <view class="value"  v-if="!noEditValue" >
+              <view class="name" :class="{'fill':selectLabel}">
+                {{selectLabel?selectLabel:placeHolder}}
+              </view>
+              <u-icon name="arrow-right" size="30" color="#C4C4C4"></u-icon>
+            </view>
+            <view class="noEditValue" :style="noEditValueStyle" v-else>
+              {{noEditValue}}
+            </view>
+          </view>
         </view>
-        <u-icon name="arrow-right" size="30" color="#C4C4C4"></u-icon>
-      </view>
-      <view class="noEditValue" :style="noEditValueStyle" v-else>
-        {{noEditValue}}
-      </view>
+      </slot>
     </view>
-    <ExpressTimePicker :show="popupShow"  @close="popupShow = false" shake @conform="conformExpressTime"></ExpressTimePicker>
+    <ExpressTimePicker ref="ExpressTimePicker"   shake @conform="conformExpressTime"></ExpressTimePicker>
   </view>
 </template>
 
@@ -27,6 +33,9 @@
       ExpressTimePicker
     },
     props: {
+      height:{
+        default:'100rpx'
+      },
       padding:{
         default:'0 24rpx'
       },
@@ -43,9 +52,6 @@
       labelWidth:{
         default:196
       },
-      value:{
-        default:''
-      },
       labelColor:{
         default:'#888888'
       },
@@ -54,6 +60,9 @@
       },
       noEditValue:{ //直接显示value值模式
         default:''
+      },
+      placeHolder:{
+        default:'请选择时间'
       }
     },
     data(){
@@ -82,11 +91,8 @@
         if(this.border) {
           str +='border-bottom:  1rpx solid #E5E5E5;'
         }
-        if(this.noEditValue) {
-          str += `justify-content: flex-start;border-bottom:none;`//有默认值不显示底部border
-        }
-        else {
-          str += `justify-content: space-between;`
+        if(this.height) {
+          str += `height:${this.height};`
         }
         return str
       }
@@ -97,8 +103,8 @@
         this.$emit('confirm',{
           date:date,
           time:time,
+          label:label
         })
-        this.$emit('close')
       },
     }
   }
@@ -212,8 +218,11 @@
           justify-content: flex-end;
           .name {
             font-size: 30rpx;
-            color: #333333;
+            color: #C4C4C4;
             margin-right: 18rpx;
+            &.fill {
+              color: #333333;
+            }
           }
         }
       }

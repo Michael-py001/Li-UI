@@ -19,7 +19,12 @@
       <ChooseNumber label="预估重量(Kg)" height="114rpx" labelWidth="230" v-model="weight"></ChooseNumber>
       <TextInput label="手机号" height="114rpx" labelWidth="230"  holderPlaceText="请输入手机号" type="number" v-model="phone" :handleGetCodeFunc="handleGetCodeFunc" mode="getCode" ></TextInput>
       <AddressSelect label="详细地址" height="114rpx" :border="true" labelWidth="190" :disabled="false" holderPlaceText="请选择详细地址" @comfirm="comfirmAddress"></AddressSelect>
-      <ChooseExpressTime shake label="期望上门时间" labelWidth="230" :value="expressTime" @change="expressTimeChange"></ChooseExpressTime>
+      <ChooseExpressTime height="114rpx" shake @confirm="expressTimeChange">
+        <ChoosePopup height="114rpx"  disabled label="上门时间(插槽)" labelWidth="230"  holderPlaceText="请选择上门时间" v-model="expressTime" ></ChoosePopup>
+      </ChooseExpressTime>
+      
+      <ChooseExpressTime height="114rpx" shake label="期望上门时间" labelWidth="230" />
+      
        <ChooseImages direction="column" :border="true" label="上传截图(纵向)" labelWidth="230" deleteIconType='two' :limitNum="5"  v-model="imgList"></ChooseImages>
         <ChooseImages  :border="true" label="上传截图(横向)" labelWidth="230" deleteIconType='two' :limitNum="5"  v-model="imgList"></ChooseImages>
         <IDCardUpload direction="column" v-model="idCardList"  deleteIconType='two' label="请上传您的有效身份证"></IDCardUpload>
@@ -53,7 +58,9 @@
   let phone = $ref(''),
       imgList  = [],
       avatar = $ref(''),
-      date = $ref('')
+      date = $ref(''),
+      expressTime = $ref('')
+      
   const onChooseAvatar = ({detail:{avatarUrl}})=>{
     avatar = avatarUrl
   }
@@ -69,6 +76,11 @@
         resolve()
       },1000)
     })
+  }
+  
+  const expressTimeChange = ({date,time,label})=>{
+    console.log(date,time,label)
+    expressTime = label
   }
 </script>
 

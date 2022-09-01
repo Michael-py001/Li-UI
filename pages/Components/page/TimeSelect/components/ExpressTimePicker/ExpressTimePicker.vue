@@ -1,39 +1,40 @@
 <template>
   <view class="ExpressTimePicker">
-    <u-popup :show="show" @close="closeHandler" mode="bottom" height="800" border-radius="24" >
-    		<view class="main">
-          <view class="title">
-            <view class="name">
-              选择上门时间
-            </view>
-            <u-icon name="close" size="35" @click="$emit('close')"></u-icon> 
+    <view  v-if="show" :class="{'show':aniMaskShow}" class="mask" @click.stop="closeHandler"></view>
+    <!-- <u-popup :show="show" @close="closeHandler" mode="bottom" height="800" border-radius="24" > -->
+    <view class="main" :class="{'show':aniMaskShow}" v-if="show" >
+      <view class="title">
+        <view class="name">
+          选择上门时间
+        </view>
+        <u-icon name="close" size="35" @click.stop="close()"></u-icon> 
+      </view>
+      <view class="bottom">
+        <view class="left">
+          <view class="tab" :class="{'active':activeTab==0}" @click.stop="clickTab(0)" v-if="showToday"> 
+            今天
           </view>
-          <view class="bottom">
-            <view class="left">
-              <view class="tab" :class="{'active':activeTab==0}" @click="clickTab(0)" v-if="showToday"> 
-                今天
-              </view>
-              <view class="tab" :class="{'active':activeTab==1}"  @click="clickTab(1)">
-                明天
-              </view>
-            </view>
-            <view class="right">
-              <picker-view :value="valueArr" @change="change" :indicator-style="indicatorStyle" indicator-class="active-picker" class="u-picker-view" >
-                <picker-view-column >
-                	<view class="u-column-item" v-for="(item, index) in timeList" :key="index" >
-                		<view class="u-line-1" :class="{'active':valueArr[0]==index}">{{ item.label }}</view>
-                	</view>
-                </picker-view-column>
-              </picker-view>
-            </view>
-          </view>
-          <view class="comfirm-btn">
-            <view class="btn" @click="confirm">
-              确定
-            </view>
+          <view class="tab" :class="{'active':activeTab==1}"  @click.stop="clickTab(1)">
+            明天
           </view>
         </view>
-    </u-popup>
+        <view class="right">
+          <picker-view :value="valueArr" @change="change" :indicator-style="indicatorStyle" indicator-class="active-picker" class="u-picker-view" >
+            <picker-view-column >
+              <view class="u-column-item" v-for="(item, index) in timeList" :key="index" >
+                <view class="u-line-1" :class="{'active':valueArr[0]==index}">{{ item.label }}</view>
+              </view>
+            </picker-view-column>
+          </picker-view>
+        </view>
+      </view>
+      <view class="comfirm-btn">
+        <view class="btn" @click.stop="confirm">
+          确定
+        </view>
+      </view>
+    </view>
+    <!-- </u-popup> -->
   </view>
 </template>
 
@@ -44,10 +45,6 @@
       shake:{
         type:Boolean,
         default:false  //是否开启震动
-      },
-      show:{ //是否显示
-        type:Boolean,
-        default:false  
       },
       // 是否允许点击遮罩关闭选择器
       closeOnClickOverlay: {
@@ -66,12 +63,11 @@
          showToday:true,
          date:'',
          time:'',
+         show:false,
+         aniMaskShow:false
        }
      },
     watch:{
-      show(value) {
-        console.log("show:",value)
-      },
       activeTab(value) {
         this.selectLabel = this.timeList[this.valueArr].label
         let date = ''
@@ -137,9 +133,30 @@
        this.initTime()
      },
      methods: {
+       open() {
+         console.log("open")
+         this.show = true
+         setTimeout(()=>{
+           this.$nextTick(()=>{
+             this.aniMaskShow = true
+           })
+         },50)
+       },
+       close() {
+        console.log("close")
+         this.aniMaskShow = false
+         setTimeout(()=>{
+           this.$nextTick(()=>{
+             this.show = false
+             console.log("this.show:",this.show)
+           })
+         },300)
+         this.$emit('close')
+       },
        closeHandler() {
+         console.log("closeHandler")
          if(this.closeOnClickOverlay) {
-           this.$emit('close')
+           this.close()
          }
        },
        confirm() {
@@ -148,7 +165,7 @@
            time:this.time,
            label:this.selectLabelCurrent
          })
-         this.$emit('close')
+         this.close()
        },
        clickTab(index){
          this.activeTab = index
@@ -236,7 +253,22 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+  .mask {
+  	position: fixed;
+  	bottom: 0px;
+  	top: 0px;
+  	left: 0px;
+  	right: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition-property: opacity;
+  	transition-duration: 0.3s;
+  	z-index: 96;
+    opacity: 0;
+    &.show {
+      opacity: 1;
+    }
+  }
   .ExpressTimePicker{
     .u-picker-view {
     	height: 100%;
@@ -259,8 +291,24 @@
     }
     // 弹窗样式
     .main {
+      position: fixed;
       padding: 44rpx 29rpx 40rpx;
       padding-bottom: 150rpx;
+      left: 0;
+      bottom: 0;
+      max-height: 950rpx;
+      z-index: 97;
+      background-color: #fff;
+      width: 100%;
+      transition-property: opacity;
+      transition-duration: 0.3s;
+      transform: translateY(900rpx);
+      opacity: 0;
+      transition: 0.3s;
+      &.show {
+        transform: translateY(0rpx);
+        opacity: 1;
+      }
       .title {
         display: flex;
         justify-content: space-between;
@@ -276,6 +324,7 @@
       .bottom {
         flex: 1;
         display: flex;
+        padding-bottom: 80rpx;
         .left {
           display: flex;
           flex-direction: column;
