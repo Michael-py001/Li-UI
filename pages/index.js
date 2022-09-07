@@ -100,7 +100,6 @@ for (let index in routes) {
       	url: `/pages/${modular_name}/page/${page_name}/${page_name}`
       }
 		}
-    console.log("_route:",_route)
 	} else {
 		console.error(index + ' route载入错误')
 	}
@@ -115,7 +114,6 @@ const _nav = (route_name, query = {}, open_type = '') => {
 	return new Promise((resolve, reject) => {
     try{
       route_name = route_name.toLowerCase()
-      console.log("route_name:",route_name)
       //加入点击防抖，防止卡顿时候出现多次跳转
       throttle(() => {
       	// 判断是否为后退
@@ -150,7 +148,6 @@ const _nav = (route_name, query = {}, open_type = '') => {
       	const _openType = type || open_type || 'navigateTo'
       	// 和页面参数拼凑后的url
       	const queryUrl = _openType === 'switchTab' ? url : `${url}?${queryList.join('&')}`
-        console.log("queryUrl:",queryUrl)
       	// 根据打开类型执行打开页面，switchTab不允许添加参数
       	let object = {
       		url: queryUrl,
