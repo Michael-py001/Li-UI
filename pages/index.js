@@ -87,11 +87,20 @@ for (let index in routes) {
 		let modular_name = modular_name_match[1]
 		for (let page_name in route_item) {
 			let route_name = `${modular_name}.${page_name}`.toLowerCase()
-			_route[`${route_name}`] = {
-				...route_item[page_name],
-				url: `/pages/${modular_name}/page/${route_item[page_name]['include'] || page_name}/${page_name}`
-			}
+      let includesPages = route_item[page_name]['include'] || []
+      if(includesPages.length>0) {
+        includesPages.forEach(page=>{
+          _route[`${route_name}.${page.toLowerCase()}`] = {
+          	url: `/pages/${modular_name}/page/${page_name}/include/${page}`
+          }
+        })
+      }
+      _route[`${route_name}`] = {
+      	...route_item[page_name],
+      	url: `/pages/${modular_name}/page/${page_name}/${page_name}`
+      }
 		}
+    console.log("_route:",_route)
 	} else {
 		console.error(index + ' route载入错误')
 	}
@@ -106,6 +115,7 @@ const _nav = (route_name, query = {}, open_type = '') => {
 	return new Promise((resolve, reject) => {
     try{
       route_name = route_name.toLowerCase()
+      console.log("route_name:",route_name)
       //加入点击防抖，防止卡顿时候出现多次跳转
       throttle(() => {
       	// 判断是否为后退
