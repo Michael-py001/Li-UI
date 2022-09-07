@@ -5,9 +5,16 @@
 </template>
 
 <script setup>
+  import {computed} from 'vue'
   // <Title name="基础组件"></Title>
   const props = defineProps({
-    name:String
+    name:{
+      type:String,
+      default:''
+    }
+  })
+  const blockLength = computed(()=>{
+    return props.name.length * 30 + 'rpx'
   })
 </script>
 
@@ -24,11 +31,13 @@
       position: absolute;
       bottom: -8rpx;
       left: -5px;
-      width: 120rpx;
+      width: v-bind(blockLength);
+      // width: 120rpx;
       height: 16rpx;
       background-color: #194ce5;
       z-index: -1;
       opacity: .9;
+      border-radius: 8rpx;
     }
   }
 </style>

@@ -12,12 +12,17 @@
       <Item name="NavBar 自定义导航栏" url="Components.NavBar"></Item>
     </view>
     <view class="box">
-      <Title name="其他组件"></Title>
-      <Item name="PageEnd 列表页加载状态" url="Components.PageEnd"></Item>
-    </view>
-    <view class="box">
       <Title name="反馈组件"></Title>
       <Item name="ConfirmPopup 确认弹窗组件" url="Components.ConfirmPopup"></Item>
+    </view>
+    <view class="box">
+      <Title name="图表组件"></Title>
+      <Item name="antv F2 蚂蚁图表" url="Components.F2Chart"></Item>
+      <Item name="echart 百度图表" url="Components.ConfirmPopup"></Item>
+    </view>
+    <view class="box">
+      <Title name="其他组件"></Title>
+      <Item name="PageEnd 列表页加载状态" url="Components.PageEnd"></Item>
     </view>
   </view>
 </template>

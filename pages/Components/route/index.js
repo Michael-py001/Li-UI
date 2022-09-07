@@ -5,5 +5,8 @@ export default {
   NavBar:{},
   PageEnd:{},
   Rate:{},
-  ConfirmPopup:{}
+  ConfirmPopup:{},
+  F2Chart:{
+    include: ['Pie']
+  }
 }
