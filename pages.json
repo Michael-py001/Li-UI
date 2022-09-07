@@ -18,58 +18,72 @@
   },
   "subPackages": [{
     "root": "pages/Components/page",
-    "pages": [{
-      "path": "Form/Form",
-      "style": {
-        "navigationBarTitleText": "Form表单",
-        "enablePullDownRefresh": false
-      }
-    }, {
-      "path": "TimeSelect/TimeSelect",
-      "style": {
-        "navigationBarTitleText": "时间选择器",
-        "enablePullDownRefresh": false
-      }
+    "pages": [
+      {
+        "path": "F2Chart/F2Chart",
+        "style": {
+          "navigationBarTitleText": "antv F2 蚂蚁图表",
+          "enablePullDownRefresh": false
+        }
+      },
+      {
+        "path": "F2Chart/include/Pie",
+        "style": {
+          "navigationBarTitleText": "饼图",
+          "enablePullDownRefresh": false
+        }
+      },
+      {
+        "path": "Form/Form",
+        "style": {
+          "navigationBarTitleText": "Form表单",
+          "enablePullDownRefresh": false
+        }
+      }, {
+        "path": "TimeSelect/TimeSelect",
+        "style": {
+          "navigationBarTitleText": "时间选择器",
+          "enablePullDownRefresh": false
+        }
 
-    }, {
-      "path": "Tabs/Tabs",
-      "style": {
-        "navigationBarTitleText": "Tabs标签",
-        "enablePullDownRefresh": false
-      }
+      }, {
+        "path": "Tabs/Tabs",
+        "style": {
+          "navigationBarTitleText": "Tabs标签",
+          "enablePullDownRefresh": false
+        }
 
-    }, {
-      "path": "NavBar/NavBar",
-      "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false,
-        "navigationStyle": "custom"
-      }
+      }, {
+        "path": "NavBar/NavBar",
+        "style": {
+          "navigationBarTitleText": "",
+          "enablePullDownRefresh": false,
+          "navigationStyle": "custom"
+        }
 
-    }, {
-      "path": "PageEnd/PageEnd",
-      "style": {
-        "navigationBarTitleText": "列表页加载状态",
-        "enablePullDownRefresh": true
-      }
+      }, {
+        "path": "PageEnd/PageEnd",
+        "style": {
+          "navigationBarTitleText": "列表页加载状态",
+          "enablePullDownRefresh": true
+        }
 
-    }, {
-      "path": "Rate/Rate",
-      "style": {
-        "navigationBarTitleText": "评分",
-        "enablePullDownRefresh": false
-      }
+      }, {
+        "path": "Rate/Rate",
+        "style": {
+          "navigationBarTitleText": "评分",
+          "enablePullDownRefresh": false
+        }
 
-    }    ,{
-                    "path" : "ConfirmPopup/ConfirmPopup",
-                    "style" :                                                                                    
-                {
-                    "navigationBarTitleText": "确认弹窗",
-                    "enablePullDownRefresh": false
-                }
-                
-                }
-            ]
+      }, {
+        "path": "ConfirmPopup/ConfirmPopup",
+        "style": {
+          "navigationBarTitleText": "确认弹窗",
+          "enablePullDownRefresh": false
+        }
+
+      }
+    ]
   }],
   "easycom": {
     "autoscan": true,
