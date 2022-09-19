@@ -51,7 +51,8 @@
         "appid" : "wx327984523bf405ca",
         "setting" : {
             "urlCheck" : false,
-            "es6" : false
+            "es6" : true,
+            "bigPackageSizeSupport":true
         },
         "usingComponents" : true,
         "requiredPrivateInfos" : [ "getLocation", "chooseLocation" ],

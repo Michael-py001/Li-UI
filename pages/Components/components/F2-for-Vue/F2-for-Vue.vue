@@ -21,9 +21,9 @@
 </template>
 
 <script>
-import F2 from '@antv/f2';
-import PieLabel from '@antv/f2/lib/plugin/pie-label'
-F2.Chart.plugins.register(PieLabel);
+import F2 from '@antv/f2/dist/f2-all.min';
+// import ScrollBar from '@antv/f2/lib/plugin/scroll-bar'
+// F2.Chart.plugins.register(ScrollBar);
 
 function wrapEvent(e) {
   if (!e) return;

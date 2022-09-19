@@ -9,7 +9,7 @@
   dependencies:
     "@antv/util" "~1.3.1"
 
-"@antv/f2@~3.7.0":
+"@antv/f2@^3.7.8":
   "integrity" "sha512-ZPwgKd/ycQAQBhNoOn7+silxURYJVgtRv/q7f68X9++XRvitQPwtDnpUsR0gyLUbFO1XiFbhXtbRx8RzyZWFdg=="
   "resolved" "https://registry.npmmirror.com/@antv/f2/-/f2-3.7.8.tgz"
   "version" "3.7.8"
@@ -50,13 +50,6 @@
   dependencies:
     "csstype" "^3.0.8"
     "tslib" "^2.0.3"
-
-"@antv/wx-f2@^2.1.1":
-  "integrity" "sha512-15S+Fz9NYFpZvXHaOM65lcNWEpsx7SmIyDDGMDZ0/beNW2T4DkxBdJwVLjE/SBIZc7kbQKJsC8n2p4HLbHcJYg=="
-  "resolved" "https://registry.npmmirror.com/@antv/wx-f2/-/wx-f2-2.1.1.tgz"
-  "version" "2.1.1"
-  dependencies:
-    "@antv/f2" "~3.7.0"
 
 "@babel/runtime@^7.7.7":
   "integrity" "sha512-lkqXDcvlFT5rvEjiu6+QYO+1GXrEHRo2LOtS7E4GtX5ESIZOgepqsZBVIj6Pv+a6zqsya9VCgiK1KAK4BvJDAw=="
