@@ -160,6 +160,10 @@ export default {
       // 添加饼图文本
       chart.pieLabel({
         sidePadding: 40,
+        activeShape: true,
+        activeStyle:{
+          
+        },
         label1: function label1(data, color) {
           return {
             text: data.name,
@@ -172,6 +176,12 @@ export default {
             fill: '#808080',
             fontWeight: 'bold'
           };
+        },
+        onClick: function onClick(ev) {
+          const data = ev.data;
+          if (data) {
+            console.log(data)
+          }
         }
       });
       
@@ -238,6 +248,7 @@ export default {
       // 配置文本饼图
       chart.pieLabel({
         sidePadding: 75,
+        activeShape: true,
         label1: function label1(data) {
           return {
             text: data.memo,
@@ -288,7 +299,7 @@ export default {
       }, {
         const: 'const',
         type: '生活日用',
-        money: 20.00
+        money: 120.00
       }, {
         const: 'const',
         type: '住房缴费',
@@ -330,8 +341,6 @@ export default {
             console.log(data)
             that.title = data.type
             that.money = data.money
-            // $('#title').text(data.type);
-            // $('#money').text(data.money);
           }
         }
       });
