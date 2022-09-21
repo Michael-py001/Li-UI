@@ -20,10 +20,15 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import F2 from '@antv/f2/dist/f2-all.min';
+import {onMounted,ref,getCurrentInstance} from 'vue'
+
+const instance = getCurrentInstance() //获取当前组件实例
 // import ScrollBar from '@antv/f2/lib/plugin/scroll-bar'
 // F2.Chart.plugins.register(ScrollBar);
+let _chart = null,
+    _canvasEl = null
 
 function wrapEvent(e) {
   if (!e) return;
@@ -35,44 +40,38 @@ function wrapEvent(e) {
   // }
   return e;
 }
-
-export default {
-  props: {
-    onInit: {
-      type: Function,
-      default: () => {}
-    }
-  },
-  data() { 
-    return {
-
-    }
-  },
-  methods: {
-    touchStart(e) {
-      const canvasEl = this.canvasEl;
-      if (!canvasEl) {
-        return;
-      }
-      canvasEl.dispatchEvent('touchstart', wrapEvent(e));
-    },
-    touchMove(e) {
-      const canvasEl = this.canvasEl;
-      if (!canvasEl) {
-        return;
-      }
-      canvasEl.dispatchEvent('touchmove', wrapEvent(e));
-    },
-    touchEnd(e) {
-      const canvasEl = this.canvasEl;
-      if (!canvasEl) {
-        return;
-      }
-      canvasEl.dispatchEvent('touchend', wrapEvent(e));
-    }
-  },
-  mounted () {
-    const query = wx.createSelectorQuery().in(this);
+onMounted(()=>{
+ if(props.onInit) {
+   init()
+ }
+}) 
+const props = defineProps({
+  onInit: {
+    type: Function,
+  }
+})
+defineExpose({
+  init
+})
+async function init(config={}) {
+  let _config = Object.assign(await getContext(),config) 
+  let chart = null
+  // 挂载时渲染
+  if(Object.prototype.toString.call(config).toLowerCase()=='[object object]' && props.onInit) {
+    chart = await props.onInit(F2, _config);
+  }
+  // 手动渲染
+  else if(Object.prototype.toString.call(config).toLowerCase()=='[object function]') {
+    chart = await config(_config)
+  }
+  if (chart) {
+    _chart = chart;
+    _canvasEl = chart.get('el');
+  }
+}
+function getContext() {
+  return new Promise((resolve,reject)=>{
+    const query = wx.createSelectorQuery().in(instance);
     query.select('.f2-canvas')
       .fields({
         node: true,
@@ -85,15 +84,33 @@ export default {
         // 高清设置
         node.width = width * pixelRatio;
         node.height = height * pixelRatio;
-        const config = { context, width, height, pixelRatio };
-        const chart = this.onInit(F2, config);
-        if (chart) {
-          this.chart = chart;
-          this.canvasEl = chart.get('el');
-        }
-      });
+        let config = { context, width, height, pixelRatio, canvas:node}
+        resolve(config)
+    });
+  })
+}
+function touchStart(e) {
+  const canvasEl = _canvasEl;
+  if (!canvasEl) {
+    return;
   }
- }
+  canvasEl.dispatchEvent('touchstart', wrapEvent(e));
+}
+function touchMove(e) {
+  const canvasEl = _canvasEl;
+  if (!canvasEl) {
+    return;
+  }
+  canvasEl.dispatchEvent('touchmove', wrapEvent(e));
+}
+function touchEnd(e) {
+  const canvasEl = _canvasEl;
+  if (!canvasEl) {
+    return;
+  }
+  canvasEl.dispatchEvent('touchend', wrapEvent(e));
+}
+  
 </script>
 
 <style lang="less" scoped>
