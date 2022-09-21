@@ -9772,4 +9772,9 @@ const f2 = (this, function() {
   }])
 })
 
-export default f2()
+var F2 = f2();
+exports.F2 = F2;
+
+export default F2
+
+
