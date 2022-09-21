@@ -12,7 +12,7 @@
     />
     <Box
       src="/static/Chart/Column.png" 
-      url="Components.F2Chart"
+      url="Components.F2Chart.column"
       title="柱状图"
     />
     <!-- view class="box">

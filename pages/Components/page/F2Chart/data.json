@@ -1,516 +1,1392 @@
 {
-  "lineData":[
-    {
-        "title": "Bohemian Rhapsody",
-        "artist": "Queen",
-        "release": 1975,
-        "year": "1999",
-        "rank": "1",
-        "count": 978
+  "basicColumn": [{
+    "year": "1951 年",
+    "sales": 38
+  }, {
+    "year": "1952 年",
+    "sales": 52
+  }, {
+    "year": "1956 年",
+    "sales": 61
+  }, {
+    "year": "1957 年",
+    "sales": 145
+  }, {
+    "year": "1958 年",
+    "sales": 48
+  }, {
+    "year": "1959 年",
+    "sales": 38
+  }, {
+    "year": "1960 年",
+    "sales": 38
+  }, {
+    "year": "1962 年",
+    "sales": 38
+  }],
+  "column5":[
+      {
+          "year": "2014 年",
+          "sales": 145
+      },
+      {
+          "year": "2015 年",
+          "sales": 121
+      },
+      {
+          "year": "2016 年",
+          "sales": 100
+      },
+      {
+          "year": "2017 年",
+          "sales": 97
+      },
+      {
+          "year": "2018 年",
+          "sales": 85
+      }
+  ],
+  "column2": [{
+      "genre": "Sports",
+      "sold": 275
     },
     {
-        "title": "Hotel California",
-        "artist": "Eagles",
-        "release": 1977,
-        "year": "1999",
-        "rank": "2",
-        "count": 1284
+      "genre": "Strategy",
+      "sold": 115
     },
     {
-        "title": "Child In Time",
-        "artist": "Deep Purple",
-        "release": 1972,
-        "year": "1999",
-        "rank": "3",
-        "count": 1117
+      "genre": "Action",
+      "sold": 120
     },
     {
-        "title": "Stairway To Heaven",
-        "artist": "Led Zeppelin",
-        "release": 1971,
-        "year": "1999",
-        "rank": "4",
-        "count": 1132
+      "genre": "Shooter",
+      "sold": 350
     },
     {
-        "title": "Paradise By The Dashboard Light",
-        "artist": "Meat Loaf",
-        "release": 1978,
-        "year": "1999",
-        "rank": "5",
-        "count": 1187
+      "genre": "Other",
+      "sold": 150
+    }
+  ],
+  "column4":[
+    {
+        "date": "2017-11-01",
+        "steps": 30529,
+        "first": true
     },
     {
-        "title": "Yesterday",
-        "artist": "The Beatles",
-        "release": 1965,
-        "year": "1999",
-        "rank": "6",
-        "count": 909
+        "date": "2017-11-02",
+        "steps": 30193
     },
     {
-        "title": "Angie",
-        "artist": "The Rolling Stones",
-        "release": 1973,
-        "year": "1999",
-        "rank": "8",
-        "count": 1183
+        "date": "2017-11-03",
+        "steps": 20919
     },
     {
-        "title": "Bridge Over Troubled Water",
-        "artist": "Simon & Garfunkel",
-        "release": 1970,
-        "year": "1999",
-        "rank": "9",
-        "count": 1111
+        "date": "2017-11-04",
+        "steps": 25413
     },
     {
-        "title": "A Whiter Shade Of Pale",
-        "artist": "Procol Harum",
-        "release": 1967,
-        "year": "1999",
-        "rank": "10",
-        "count": 1190
+        "date": "2017-11-05",
+        "steps": 28461
     },
     {
-        "title": "Hey Jude",
-        "artist": "The Beatles",
-        "release": 1968,
-        "year": "1999",
-        "rank": "11",
-        "count": 1037
+        "date": "2017-11-06",
+        "steps": 22920
     },
     {
-        "title": "House Of The Rising Sun",
-        "artist": "The Animals",
-        "release": 1964,
-        "year": "1999",
-        "rank": "13",
-        "count": 543
+        "date": "2017-11-07",
+        "steps": 33865
     },
     {
-        "title": "Goodnight Saigon",
-        "artist": "Billy Joel",
-        "release": 1983,
-        "year": "1999",
-        "rank": "14",
-        "count": 748
+        "date": "2017-11-08",
+        "steps": 19357
     },
     {
-        "title": "Dancing Queen",
-        "artist": "ABBA",
-        "release": 1976,
-        "year": "1999",
-        "rank": "16",
-        "count": 1111
+        "date": "2017-11-09",
+        "steps": 16825
     },
     {
-        "title": "Another Brick In The Wall",
-        "artist": "Pink Floyd",
-        "release": 1979,
-        "year": "1999",
-        "rank": "17",
-        "count": 1266
+        "date": "2017-11-10",
+        "steps": 12516
     },
     {
-        "title": "Sunday Bloody Sunday",
-        "artist": "U2",
-        "release": 1985,
-        "year": "1999",
-        "rank": "18",
-        "count": 1087
+        "date": "2017-11-11",
+        "steps": 31490
     },
     {
-        "title": "Tears In Heaven",
-        "artist": "Eric Clapton",
-        "release": 1992,
-        "year": "1999",
-        "rank": "21",
-        "count": 435
+        "date": "2017-11-12",
+        "steps": 2426
     },
     {
-        "title": "Old And Wise",
-        "artist": "The Alan Parsons Project",
-        "release": 1982,
-        "year": "1999",
-        "rank": "24",
-        "count": 945
+        "date": "2017-11-13",
+        "steps": 29789
     },
     {
-        "title": "Losing My Religion",
-        "artist": "R.E.M.",
-        "release": 1991,
-        "year": "1999",
-        "rank": "25",
-        "count": 415
+        "date": "2017-11-14",
+        "steps": 19578
     },
     {
-        "title": "School",
-        "artist": "Supertramp",
-        "release": 1974,
-        "year": "1999",
-        "rank": "26",
-        "count": 1011
+        "date": "2017-11-15",
+        "steps": 28381
     },
     {
-        "title": "Who Wants To Live Forever",
-        "artist": "Queen",
-        "release": 1986,
-        "year": "1999",
-        "rank": "30",
-        "count": 836
+        "date": "2017-11-16",
+        "steps": 24357
     },
     {
-        "title": "Everybody Hurts",
-        "artist": "R.E.M.",
-        "release": 1993,
-        "year": "1999",
-        "rank": "31",
-        "count": 301
+        "date": "2017-11-17",
+        "steps": 22865
     },
     {
-        "title": "Over De Muur",
-        "artist": "Klein Orkest",
-        "release": 1984,
-        "year": "1999",
-        "rank": "32",
-        "count": 1166
+        "date": "2017-11-18",
+        "steps": 885
     },
     {
-        "title": "Paint It Black",
-        "artist": "The Rolling Stones",
-        "release": 1966,
-        "year": "1999",
-        "rank": "33",
-        "count": 1077
+        "date": "2017-11-19",
+        "steps": 14907
     },
     {
-        "title": "The Winner Takes It All",
-        "artist": "ABBA",
-        "release": 1980,
-        "year": "1999",
-        "rank": "35",
-        "count": 926
+        "date": "2017-11-20",
+        "steps": 11647
     },
     {
-        "title": "Candle In The Wind (1997)",
-        "artist": "Elton John",
-        "release": 1997,
-        "year": "1999",
-        "rank": "37",
-        "count": 451
+        "date": "2017-11-21",
+        "steps": 12275
     },
     {
-        "title": "My Heart Will Go On",
-        "artist": "Celine Dion",
-        "release": 1998,
-        "year": "1999",
-        "rank": "41",
-        "count": 415
+        "date": "2017-11-22",
+        "steps": 4747
     },
     {
-        "title": "The River",
-        "artist": "Bruce Springsteen",
-        "release": 1981,
-        "year": "1999",
-        "rank": "48",
-        "count": 723
+        "date": "2017-11-23",
+        "steps": 11647
     },
     {
-        "title": "With Or Without You",
-        "artist": "U2",
-        "release": 1987,
-        "year": "1999",
-        "rank": "51",
-        "count": 816
+        "date": "2017-11-24",
+        "steps": 4926
     },
     {
-        "title": "Space Oddity",
-        "artist": "David Bowie",
-        "release": 1969,
-        "year": "1999",
-        "rank": "59",
-        "count": 1344
+        "date": "2017-11-25",
+        "steps": 4939
     },
     {
-        "title": "Stil In Mij",
-        "artist": "Van Dik Hout",
-        "release": 1994,
-        "year": "1999",
-        "rank": "65",
-        "count": 373
+        "date": "2017-11-26",
+        "steps": 1005
     },
     {
-        "title": "Nothing Compares 2 U",
-        "artist": "Sinead O'Connor",
-        "release": 1990,
-        "year": "1999",
-        "rank": "90",
-        "count": 426
+        "date": "2017-11-27",
+        "steps": 6569
     },
     {
-        "title": "Wonderful Tonight",
-        "artist": "Eric Clapton",
-        "release": 1988,
-        "year": "1999",
-        "rank": "91",
-        "count": 515
+        "date": "2017-11-28",
+        "steps": 4019
     },
     {
-        "title": "Blowing In The Wind",
-        "artist": "Bob Dylan",
-        "release": 1963,
-        "year": "1999",
-        "rank": "94",
-        "count": 323
+        "date": "2017-11-29",
+        "steps": 7620
     },
     {
-        "title": "Eternal Flame",
-        "artist": "Bangles",
-        "release": 1989,
-        "year": "1999",
-        "rank": "96",
-        "count": 495
+        "date": "2017-11-30",
+        "steps": 9878
     },
     {
-        "title": "Non Je Ne Regrette Rien",
-        "artist": "Edith Piaf",
-        "release": 1961,
-        "year": "1999",
-        "rank": "106",
-        "count": 178
+        "date": "2017-12-01",
+        "steps": 8319,
+        "first": true
     },
     {
-        "title": "Con Te Partiro",
-        "artist": "Andrea Bocelli",
-        "release": 1996,
-        "year": "1999",
-        "rank": "109",
-        "count": 362
+        "date": "2017-12-02",
+        "steps": 437
     },
     {
-        "title": "Conquest Of Paradise",
-        "artist": "Vangelis",
-        "release": 1995,
-        "year": "1999",
-        "rank": "157",
-        "count": 315
+        "date": "2017-12-03",
+        "steps": 13964
     },
     {
-        "title": "White Christmas",
-        "artist": "Bing Crosby",
-        "release": 1954,
-        "year": "1999",
-        "rank": "218",
-        "count": 10
+        "date": "2017-12-04",
+        "steps": 10347
     },
     {
-        "title": "(We're gonna) Rock Around The Clock",
-        "artist": "Bill Haley & The Comets",
-        "release": 1955,
-        "year": "1999",
-        "rank": "239",
-        "count": 19
+        "date": "2017-12-05",
+        "steps": 8615
     },
     {
-        "title": "Jailhouse Rock",
-        "artist": "Elvis Presley",
-        "release": 1957,
-        "year": "1999",
-        "rank": "247",
-        "count": 188
+        "date": "2017-12-06",
+        "steps": 10436
     },
     {
-        "title": "Take Five",
-        "artist": "Dave Brubeck",
-        "release": 1962,
-        "year": "1999",
-        "rank": "279",
-        "count": 204
+        "date": "2017-12-07",
+        "steps": 12880
     },
     {
-        "title": "It's Now Or Never",
-        "artist": "Elvis Presley",
-        "release": 1960,
-        "year": "1999",
-        "rank": "285",
-        "count": 221
+        "date": "2017-12-08",
+        "steps": 5481
     },
     {
-        "title": "Heartbreak Hotel",
-        "artist": "Elvis Presley",
-        "release": 1956,
-        "year": "1999",
-        "rank": "558",
-        "count": 109
+        "date": "2017-12-09",
+        "steps": 7053
     },
     {
-        "title": "One Night",
-        "artist": "Elvis Presley",
-        "release": 1959,
-        "year": "1999",
-        "rank": "622",
-        "count": 71
+        "date": "2017-12-10",
+        "steps": 1123
     },
     {
-        "title": "Johnny B. Goode",
-        "artist": "Chuck Berry",
-        "release": 1958,
-        "year": "1999",
-        "rank": "714",
-        "count": 89
+        "date": "2017-12-11",
+        "steps": 9074
     },
     {
-        "title": "Unforgettable",
-        "artist": "Nat 'King' Cole",
-        "release": 1951,
-        "year": "1999",
-        "rank": "1188",
-        "count": 20
+        "date": "2017-12-12",
+        "steps": 22751
     },
     {
-        "title": "La Mer",
-        "artist": "Charles Trenet",
-        "release": 1952,
-        "year": "1999",
-        "rank": "1249",
-        "count": 24
+        "date": "2017-12-13",
+        "steps": 26996
     },
     {
-        "title": "The Road Ahead",
-        "artist": "City To City",
-        "release": 1999,
-        "year": "1999",
-        "rank": "1999",
-        "count": 262
+        "date": "2017-12-14",
+        "steps": 22257
     },
     {
-        "title": "What It Is",
-        "artist": "Mark Knopfler",
-        "release": 2000,
-        "year": "2000",
-        "rank": "545",
-        "count": 291
+        "date": "2017-12-15",
+        "steps": 10756
     },
     {
-        "title": "Overcome",
-        "artist": "Live",
-        "release": 2001,
-        "year": "2001",
-        "rank": "879",
-        "count": 111
+        "date": "2017-12-16",
+        "steps": 9866
     },
     {
-        "title": "Mooie Dag",
-        "artist": "Blof",
-        "release": 2002,
-        "year": "2003",
-        "rank": "147",
-        "count": 256
+        "date": "2017-12-17",
+        "steps": 16372
     },
     {
-        "title": "Clocks",
-        "artist": "Coldplay",
-        "release": 2003,
-        "year": "2003",
-        "rank": "733",
-        "count": 169
+        "date": "2017-12-18",
+        "steps": 22389
     },
     {
-        "title": "Sunrise",
-        "artist": "Norah Jones",
-        "release": 2004,
-        "year": "2004",
-        "rank": "405",
-        "count": 256
+        "date": "2017-12-19",
+        "steps": 22264
     },
     {
-        "title": "Nine Million Bicycles",
-        "artist": "Katie Melua",
-        "release": 2005,
-        "year": "2005",
-        "rank": "23",
-        "count": 250
+        "date": "2017-12-20",
+        "steps": 28597
     },
     {
-        "title": "Rood",
-        "artist": "Marco Borsato",
-        "release": 2006,
-        "year": "2006",
-        "rank": "17",
-        "count": 159
+        "date": "2017-12-21",
+        "steps": 16469
     },
     {
-        "title": "If You Were A Sailboat",
-        "artist": "Katie Melua",
-        "release": 2007,
-        "year": "2007",
-        "rank": "101",
-        "count": 256
+        "date": "2017-12-22",
+        "steps": 6229
     },
     {
-        "title": "Viva La Vida",
-        "artist": "Coldplay",
-        "release": 2009,
-        "year": "2009",
-        "rank": "11",
-        "count": 228
+        "date": "2017-12-23",
+        "steps": 37798
     },
     {
-        "title": "Dochters",
-        "artist": "Marco Borsato",
-        "release": 2008,
-        "year": "2009",
-        "rank": "25",
-        "count": 268
+        "date": "2017-12-24",
+        "steps": 5436
     },
     {
-        "title": "Need You Now",
-        "artist": "Lady Antebellum",
-        "release": 2010,
-        "year": "2010",
-        "rank": "210",
-        "count": 121
+        "date": "2017-12-25",
+        "steps": 29059
     },
     {
-        "title": "Someone Like You",
-        "artist": "Adele",
-        "release": 2011,
-        "year": "2011",
-        "rank": "6",
-        "count": 187
+        "date": "2017-12-26",
+        "steps": 10556
     },
     {
-        "title": "I Follow Rivers",
-        "artist": "Triggerfinger",
-        "release": 2012,
-        "year": "2012",
-        "rank": "79",
-        "count": 167
+        "date": "2017-12-27",
+        "steps": 16673
     },
     {
-        "title": "Get Lucky",
-        "artist": "Daft Punk",
-        "release": 2013,
-        "year": "2013",
-        "rank": "357",
-        "count": 141
+        "date": "2017-12-28",
+        "steps": 30217
     },
     {
-        "title": "Home",
-        "artist": "Dotan",
-        "release": 2014,
-        "year": "2014",
-        "rank": "82",
-        "count": 76
+        "date": "2017-12-29",
+        "steps": 30470
     },
     {
-        "title": "Hello",
-        "artist": "Adele",
-        "release": 2015,
-        "year": "2015",
-        "rank": "23",
-        "count": 29
+        "date": "2017-12-30",
+        "steps": 28839
+    },
+    {
+        "date": "2017-12-31",
+        "steps": 8262
+    },
+    {
+        "date": "2018-01-01",
+        "steps": 25991,
+        "first": true
+    },
+    {
+        "date": "2018-01-02",
+        "steps": 15422
+    },
+    {
+        "date": "2018-01-03",
+        "steps": 7033
+    },
+    {
+        "date": "2018-01-04",
+        "steps": 11310
+    },
+    {
+        "date": "2018-01-05",
+        "steps": 11194
+    },
+    {
+        "date": "2018-01-06",
+        "steps": 10848
+    },
+    {
+        "date": "2018-01-07",
+        "steps": 10283
+    },
+    {
+        "date": "2018-01-08",
+        "steps": 11092
+    },
+    {
+        "date": "2018-01-09",
+        "steps": 25841
+    },
+    {
+        "date": "2018-01-10",
+        "steps": 23660
+    },
+    {
+        "date": "2018-01-11",
+        "steps": 31112
+    },
+    {
+        "date": "2018-01-12",
+        "steps": 41316
+    },
+    {
+        "date": "2018-01-13",
+        "steps": 30771
+    },
+    {
+        "date": "2018-01-14",
+        "steps": 3259
+    },
+    {
+        "date": "2018-01-15",
+        "steps": 25631
+    },
+    {
+        "date": "2018-01-16",
+        "steps": 29034
+    },
+    {
+        "date": "2018-01-17",
+        "steps": 22880
+    },
+    {
+        "date": "2018-01-18",
+        "steps": 6524
+    },
+    {
+        "date": "2018-01-19",
+        "steps": 15971
+    },
+    {
+        "date": "2018-01-21",
+        "steps": 6472
+    },
+    {
+        "date": "2018-01-22",
+        "steps": 18078
+    },
+    {
+        "date": "2018-01-23",
+        "steps": 25277
+    },
+    {
+        "date": "2018-01-24",
+        "steps": 21203
+    },
+    {
+        "date": "2018-01-25",
+        "steps": 25549
+    },
+    {
+        "date": "2018-01-26",
+        "steps": 13274
+    },
+    {
+        "date": "2018-01-27",
+        "steps": 15506
+    },
+    {
+        "date": "2018-01-28",
+        "steps": 7751
+    },
+    {
+        "date": "2018-01-29",
+        "steps": 10162
+    },
+    {
+        "date": "2018-01-30",
+        "steps": 22094
+    },
+    {
+        "date": "2018-01-31",
+        "steps": 25557
+    },
+    {
+        "date": "2018-02-01",
+        "steps": 22562,
+        "first": true
+    },
+    {
+        "date": "2018-02-02",
+        "steps": 6836
+    },
+    {
+        "date": "2018-02-03",
+        "steps": 32585
+    },
+    {
+        "date": "2018-02-04",
+        "steps": 25
+    },
+    {
+        "date": "2018-02-05",
+        "steps": 9574
+    },
+    {
+        "date": "2018-02-06",
+        "steps": 26938
+    },
+    {
+        "date": "2018-02-07",
+        "steps": 31782
+    },
+    {
+        "date": "2018-02-08",
+        "steps": 13190
+    },
+    {
+        "date": "2018-02-09",
+        "steps": 15739
+    },
+    {
+        "date": "2018-02-10",
+        "steps": 110
+    },
+    {
+        "date": "2018-02-11",
+        "steps": 10692
+    },
+    {
+        "date": "2018-02-12",
+        "steps": 9529
+    },
+    {
+        "date": "2018-02-13",
+        "steps": 9213
+    },
+    {
+        "date": "2018-02-14",
+        "steps": 8620
+    },
+    {
+        "date": "2018-02-15",
+        "steps": 8973
+    },
+    {
+        "date": "2018-02-16",
+        "steps": 1523
+    },
+    {
+        "date": "2018-02-17",
+        "steps": 16233
+    },
+    {
+        "date": "2018-02-18",
+        "steps": 8428
+    },
+    {
+        "date": "2018-02-19",
+        "steps": 12406
+    },
+    {
+        "date": "2018-02-20",
+        "steps": 164
+    },
+    {
+        "date": "2018-02-21",
+        "steps": 3803
+    },
+    {
+        "date": "2018-02-22",
+        "steps": 11845
+    },
+    {
+        "date": "2018-02-23",
+        "steps": 36663
+    },
+    {
+        "date": "2018-02-24",
+        "steps": 32824
+    },
+    {
+        "date": "2018-02-25",
+        "steps": 19866
+    },
+    {
+        "date": "2018-02-26",
+        "steps": 31452
+    },
+    {
+        "date": "2018-02-27",
+        "steps": 25994
+    },
+    {
+        "date": "2018-02-28",
+        "steps": 18424
+    },
+    {
+        "date": "2018-03-01",
+        "steps": 22729,
+        "first": true
+    },
+    {
+        "date": "2018-03-02",
+        "steps": 31532
+    },
+    {
+        "date": "2018-03-03",
+        "steps": 19539
+    },
+    {
+        "date": "2018-03-04",
+        "steps": 14809
+    },
+    {
+        "date": "2018-03-05",
+        "steps": 24733
+    },
+    {
+        "date": "2018-03-06",
+        "steps": 25916
+    },
+    {
+        "date": "2018-03-07",
+        "steps": 23294
+    },
+    {
+        "date": "2018-03-08",
+        "steps": 14746
+    },
+    {
+        "date": "2018-03-09",
+        "steps": 9547
+    },
+    {
+        "date": "2018-03-10",
+        "steps": 1235
+    },
+    {
+        "date": "2018-03-11",
+        "steps": 26760
+    },
+    {
+        "date": "2018-03-12",
+        "steps": 18053
+    },
+    {
+        "date": "2018-03-13",
+        "steps": 24653
+    },
+    {
+        "date": "2018-03-14",
+        "steps": 14604
+    },
+    {
+        "date": "2018-03-15",
+        "steps": 11160
+    },
+    {
+        "date": "2018-03-16",
+        "steps": 23320
+    },
+    {
+        "date": "2018-03-17",
+        "steps": 17468
+    },
+    {
+        "date": "2018-03-18",
+        "steps": 47
+    },
+    {
+        "date": "2018-03-19",
+        "steps": 22453
+    },
+    {
+        "date": "2018-03-20",
+        "steps": 6427
+    },
+    {
+        "date": "2018-03-21",
+        "steps": 4702
+    },
+    {
+        "date": "2018-03-22",
+        "steps": 6613
+    },
+    {
+        "date": "2018-03-23",
+        "steps": 10573
+    },
+    {
+        "date": "2018-03-24",
+        "steps": 12098
+    },
+    {
+        "date": "2018-03-25",
+        "steps": 7602
+    },
+    {
+        "date": "2018-03-26",
+        "steps": 2236
+    },
+    {
+        "date": "2018-03-27",
+        "steps": 2833
+    },
+    {
+        "date": "2018-03-28",
+        "steps": 2786
+    },
+    {
+        "date": "2018-03-29",
+        "steps": 9884
+    },
+    {
+        "date": "2018-03-30",
+        "steps": 3512
+    },
+    {
+        "date": "2018-03-31",
+        "steps": 6926
+    },
+    {
+        "date": "2018-04-01",
+        "steps": 9783,
+        "first": true
+    },
+    {
+        "date": "2018-04-02",
+        "steps": 6391
+    },
+    {
+        "date": "2018-04-03",
+        "steps": 11337
+    },
+    {
+        "date": "2018-04-04",
+        "steps": 9430
+    },
+    {
+        "date": "2018-04-05",
+        "steps": 25628
+    },
+    {
+        "date": "2018-04-06",
+        "steps": 7075
+    },
+    {
+        "date": "2018-04-07",
+        "steps": 11516
+    },
+    {
+        "date": "2018-04-08",
+        "steps": 7953
+    },
+    {
+        "date": "2018-04-09",
+        "steps": 12009
+    },
+    {
+        "date": "2018-04-10",
+        "steps": 9323
+    },
+    {
+        "date": "2018-04-11",
+        "steps": 10451
+    },
+    {
+        "date": "2018-04-12",
+        "steps": 7625
+    },
+    {
+        "date": "2018-04-13",
+        "steps": 5031
+    },
+    {
+        "date": "2018-04-14",
+        "steps": 53
+    },
+    {
+        "date": "2018-04-15",
+        "steps": 1680
+    },
+    {
+        "date": "2018-04-16",
+        "steps": 6122
+    },
+    {
+        "date": "2018-04-17",
+        "steps": 16145
+    },
+    {
+        "date": "2018-04-18",
+        "steps": 6701
+    },
+    {
+        "date": "2018-04-19",
+        "steps": 6554
+    },
+    {
+        "date": "2018-04-20",
+        "steps": 15230
+    },
+    {
+        "date": "2018-04-21",
+        "steps": 59
+    },
+    {
+        "date": "2018-04-22",
+        "steps": 2515
+    },
+    {
+        "date": "2018-04-23",
+        "steps": 6524
+    },
+    {
+        "date": "2018-04-24",
+        "steps": 26044
+    },
+    {
+        "date": "2018-04-25",
+        "steps": 29763
+    },
+    {
+        "date": "2018-04-26",
+        "steps": 10586
+    },
+    {
+        "date": "2018-04-27",
+        "steps": 14758
+    },
+    {
+        "date": "2018-04-29",
+        "steps": 549
+    },
+    {
+        "date": "2018-04-30",
+        "steps": 21
+    },
+    {
+        "date": "2018-05-01",
+        "steps": 1069,
+        "first": true
+    },
+    {
+        "date": "2018-05-02",
+        "steps": 7918
+    },
+    {
+        "date": "2018-05-03",
+        "steps": 5381
+    },
+    {
+        "date": "2018-05-04",
+        "steps": 11549
+    },
+    {
+        "date": "2018-05-06",
+        "steps": 19461
+    },
+    {
+        "date": "2018-05-07",
+        "steps": 22487
+    },
+    {
+        "date": "2018-05-08",
+        "steps": 11062
+    },
+    {
+        "date": "2018-05-09",
+        "steps": 7101
+    },
+    {
+        "date": "2018-05-10",
+        "steps": 12776
+    },
+    {
+        "date": "2018-05-11",
+        "steps": 12919
+    },
+    {
+        "date": "2018-05-12",
+        "steps": 7216
+    },
+    {
+        "date": "2018-05-13",
+        "steps": 4867
+    },
+    {
+        "date": "2018-05-14",
+        "steps": 8725
+    },
+    {
+        "date": "2018-05-15",
+        "steps": 8983
+    },
+    {
+        "date": "2018-05-16",
+        "steps": 22348
+    },
+    {
+        "date": "2018-05-17",
+        "steps": 17142
+    },
+    {
+        "date": "2018-05-18",
+        "steps": 8715
+    },
+    {
+        "date": "2018-05-19",
+        "steps": 3861
+    },
+    {
+        "date": "2018-05-20",
+        "steps": 8
+    },
+    {
+        "date": "2018-05-21",
+        "steps": 24365
+    },
+    {
+        "date": "2018-05-22",
+        "steps": 14271
+    }
+],
+  "lineData": [{
+      "title": "Bohemian Rhapsody",
+      "artist": "Queen",
+      "release": 1975,
+      "year": "1999",
+      "rank": "1",
+      "count": 978
+    },
+    {
+      "title": "Hotel California",
+      "artist": "Eagles",
+      "release": 1977,
+      "year": "1999",
+      "rank": "2",
+      "count": 1284
+    },
+    {
+      "title": "Child In Time",
+      "artist": "Deep Purple",
+      "release": 1972,
+      "year": "1999",
+      "rank": "3",
+      "count": 1117
+    },
+    {
+      "title": "Stairway To Heaven",
+      "artist": "Led Zeppelin",
+      "release": 1971,
+      "year": "1999",
+      "rank": "4",
+      "count": 1132
+    },
+    {
+      "title": "Paradise By The Dashboard Light",
+      "artist": "Meat Loaf",
+      "release": 1978,
+      "year": "1999",
+      "rank": "5",
+      "count": 1187
+    },
+    {
+      "title": "Yesterday",
+      "artist": "The Beatles",
+      "release": 1965,
+      "year": "1999",
+      "rank": "6",
+      "count": 909
+    },
+    {
+      "title": "Angie",
+      "artist": "The Rolling Stones",
+      "release": 1973,
+      "year": "1999",
+      "rank": "8",
+      "count": 1183
+    },
+    {
+      "title": "Bridge Over Troubled Water",
+      "artist": "Simon & Garfunkel",
+      "release": 1970,
+      "year": "1999",
+      "rank": "9",
+      "count": 1111
+    },
+    {
+      "title": "A Whiter Shade Of Pale",
+      "artist": "Procol Harum",
+      "release": 1967,
+      "year": "1999",
+      "rank": "10",
+      "count": 1190
+    },
+    {
+      "title": "Hey Jude",
+      "artist": "The Beatles",
+      "release": 1968,
+      "year": "1999",
+      "rank": "11",
+      "count": 1037
+    },
+    {
+      "title": "House Of The Rising Sun",
+      "artist": "The Animals",
+      "release": 1964,
+      "year": "1999",
+      "rank": "13",
+      "count": 543
+    },
+    {
+      "title": "Goodnight Saigon",
+      "artist": "Billy Joel",
+      "release": 1983,
+      "year": "1999",
+      "rank": "14",
+      "count": 748
+    },
+    {
+      "title": "Dancing Queen",
+      "artist": "ABBA",
+      "release": 1976,
+      "year": "1999",
+      "rank": "16",
+      "count": 1111
+    },
+    {
+      "title": "Another Brick In The Wall",
+      "artist": "Pink Floyd",
+      "release": 1979,
+      "year": "1999",
+      "rank": "17",
+      "count": 1266
+    },
+    {
+      "title": "Sunday Bloody Sunday",
+      "artist": "U2",
+      "release": 1985,
+      "year": "1999",
+      "rank": "18",
+      "count": 1087
+    },
+    {
+      "title": "Tears In Heaven",
+      "artist": "Eric Clapton",
+      "release": 1992,
+      "year": "1999",
+      "rank": "21",
+      "count": 435
+    },
+    {
+      "title": "Old And Wise",
+      "artist": "The Alan Parsons Project",
+      "release": 1982,
+      "year": "1999",
+      "rank": "24",
+      "count": 945
+    },
+    {
+      "title": "Losing My Religion",
+      "artist": "R.E.M.",
+      "release": 1991,
+      "year": "1999",
+      "rank": "25",
+      "count": 415
+    },
+    {
+      "title": "School",
+      "artist": "Supertramp",
+      "release": 1974,
+      "year": "1999",
+      "rank": "26",
+      "count": 1011
+    },
+    {
+      "title": "Who Wants To Live Forever",
+      "artist": "Queen",
+      "release": 1986,
+      "year": "1999",
+      "rank": "30",
+      "count": 836
+    },
+    {
+      "title": "Everybody Hurts",
+      "artist": "R.E.M.",
+      "release": 1993,
+      "year": "1999",
+      "rank": "31",
+      "count": 301
+    },
+    {
+      "title": "Over De Muur",
+      "artist": "Klein Orkest",
+      "release": 1984,
+      "year": "1999",
+      "rank": "32",
+      "count": 1166
+    },
+    {
+      "title": "Paint It Black",
+      "artist": "The Rolling Stones",
+      "release": 1966,
+      "year": "1999",
+      "rank": "33",
+      "count": 1077
+    },
+    {
+      "title": "The Winner Takes It All",
+      "artist": "ABBA",
+      "release": 1980,
+      "year": "1999",
+      "rank": "35",
+      "count": 926
+    },
+    {
+      "title": "Candle In The Wind (1997)",
+      "artist": "Elton John",
+      "release": 1997,
+      "year": "1999",
+      "rank": "37",
+      "count": 451
+    },
+    {
+      "title": "My Heart Will Go On",
+      "artist": "Celine Dion",
+      "release": 1998,
+      "year": "1999",
+      "rank": "41",
+      "count": 415
+    },
+    {
+      "title": "The River",
+      "artist": "Bruce Springsteen",
+      "release": 1981,
+      "year": "1999",
+      "rank": "48",
+      "count": 723
+    },
+    {
+      "title": "With Or Without You",
+      "artist": "U2",
+      "release": 1987,
+      "year": "1999",
+      "rank": "51",
+      "count": 816
+    },
+    {
+      "title": "Space Oddity",
+      "artist": "David Bowie",
+      "release": 1969,
+      "year": "1999",
+      "rank": "59",
+      "count": 1344
+    },
+    {
+      "title": "Stil In Mij",
+      "artist": "Van Dik Hout",
+      "release": 1994,
+      "year": "1999",
+      "rank": "65",
+      "count": 373
+    },
+    {
+      "title": "Nothing Compares 2 U",
+      "artist": "Sinead O'Connor",
+      "release": 1990,
+      "year": "1999",
+      "rank": "90",
+      "count": 426
+    },
+    {
+      "title": "Wonderful Tonight",
+      "artist": "Eric Clapton",
+      "release": 1988,
+      "year": "1999",
+      "rank": "91",
+      "count": 515
+    },
+    {
+      "title": "Blowing In The Wind",
+      "artist": "Bob Dylan",
+      "release": 1963,
+      "year": "1999",
+      "rank": "94",
+      "count": 323
+    },
+    {
+      "title": "Eternal Flame",
+      "artist": "Bangles",
+      "release": 1989,
+      "year": "1999",
+      "rank": "96",
+      "count": 495
+    },
+    {
+      "title": "Non Je Ne Regrette Rien",
+      "artist": "Edith Piaf",
+      "release": 1961,
+      "year": "1999",
+      "rank": "106",
+      "count": 178
+    },
+    {
+      "title": "Con Te Partiro",
+      "artist": "Andrea Bocelli",
+      "release": 1996,
+      "year": "1999",
+      "rank": "109",
+      "count": 362
+    },
+    {
+      "title": "Conquest Of Paradise",
+      "artist": "Vangelis",
+      "release": 1995,
+      "year": "1999",
+      "rank": "157",
+      "count": 315
+    },
+    {
+      "title": "White Christmas",
+      "artist": "Bing Crosby",
+      "release": 1954,
+      "year": "1999",
+      "rank": "218",
+      "count": 10
+    },
+    {
+      "title": "(We're gonna) Rock Around The Clock",
+      "artist": "Bill Haley & The Comets",
+      "release": 1955,
+      "year": "1999",
+      "rank": "239",
+      "count": 19
+    },
+    {
+      "title": "Jailhouse Rock",
+      "artist": "Elvis Presley",
+      "release": 1957,
+      "year": "1999",
+      "rank": "247",
+      "count": 188
+    },
+    {
+      "title": "Take Five",
+      "artist": "Dave Brubeck",
+      "release": 1962,
+      "year": "1999",
+      "rank": "279",
+      "count": 204
+    },
+    {
+      "title": "It's Now Or Never",
+      "artist": "Elvis Presley",
+      "release": 1960,
+      "year": "1999",
+      "rank": "285",
+      "count": 221
+    },
+    {
+      "title": "Heartbreak Hotel",
+      "artist": "Elvis Presley",
+      "release": 1956,
+      "year": "1999",
+      "rank": "558",
+      "count": 109
+    },
+    {
+      "title": "One Night",
+      "artist": "Elvis Presley",
+      "release": 1959,
+      "year": "1999",
+      "rank": "622",
+      "count": 71
+    },
+    {
+      "title": "Johnny B. Goode",
+      "artist": "Chuck Berry",
+      "release": 1958,
+      "year": "1999",
+      "rank": "714",
+      "count": 89
+    },
+    {
+      "title": "Unforgettable",
+      "artist": "Nat 'King' Cole",
+      "release": 1951,
+      "year": "1999",
+      "rank": "1188",
+      "count": 20
+    },
+    {
+      "title": "La Mer",
+      "artist": "Charles Trenet",
+      "release": 1952,
+      "year": "1999",
+      "rank": "1249",
+      "count": 24
+    },
+    {
+      "title": "The Road Ahead",
+      "artist": "City To City",
+      "release": 1999,
+      "year": "1999",
+      "rank": "1999",
+      "count": 262
+    },
+    {
+      "title": "What It Is",
+      "artist": "Mark Knopfler",
+      "release": 2000,
+      "year": "2000",
+      "rank": "545",
+      "count": 291
+    },
+    {
+      "title": "Overcome",
+      "artist": "Live",
+      "release": 2001,
+      "year": "2001",
+      "rank": "879",
+      "count": 111
+    },
+    {
+      "title": "Mooie Dag",
+      "artist": "Blof",
+      "release": 2002,
+      "year": "2003",
+      "rank": "147",
+      "count": 256
+    },
+    {
+      "title": "Clocks",
+      "artist": "Coldplay",
+      "release": 2003,
+      "year": "2003",
+      "rank": "733",
+      "count": 169
+    },
+    {
+      "title": "Sunrise",
+      "artist": "Norah Jones",
+      "release": 2004,
+      "year": "2004",
+      "rank": "405",
+      "count": 256
+    },
+    {
+      "title": "Nine Million Bicycles",
+      "artist": "Katie Melua",
+      "release": 2005,
+      "year": "2005",
+      "rank": "23",
+      "count": 250
+    },
+    {
+      "title": "Rood",
+      "artist": "Marco Borsato",
+      "release": 2006,
+      "year": "2006",
+      "rank": "17",
+      "count": 159
+    },
+    {
+      "title": "If You Were A Sailboat",
+      "artist": "Katie Melua",
+      "release": 2007,
+      "year": "2007",
+      "rank": "101",
+      "count": 256
+    },
+    {
+      "title": "Viva La Vida",
+      "artist": "Coldplay",
+      "release": 2009,
+      "year": "2009",
+      "rank": "11",
+      "count": 228
+    },
+    {
+      "title": "Dochters",
+      "artist": "Marco Borsato",
+      "release": 2008,
+      "year": "2009",
+      "rank": "25",
+      "count": 268
+    },
+    {
+      "title": "Need You Now",
+      "artist": "Lady Antebellum",
+      "release": 2010,
+      "year": "2010",
+      "rank": "210",
+      "count": 121
+    },
+    {
+      "title": "Someone Like You",
+      "artist": "Adele",
+      "release": 2011,
+      "year": "2011",
+      "rank": "6",
+      "count": 187
+    },
+    {
+      "title": "I Follow Rivers",
+      "artist": "Triggerfinger",
+      "release": 2012,
+      "year": "2012",
+      "rank": "79",
+      "count": 167
+    },
+    {
+      "title": "Get Lucky",
+      "artist": "Daft Punk",
+      "release": 2013,
+      "year": "2013",
+      "rank": "357",
+      "count": 141
+    },
+    {
+      "title": "Home",
+      "artist": "Dotan",
+      "release": 2014,
+      "year": "2014",
+      "rank": "82",
+      "count": 76
+    },
+    {
+      "title": "Hello",
+      "artist": "Adele",
+      "release": 2015,
+      "year": "2015",
+      "rank": "23",
+      "count": 29
     }
   ]
 }

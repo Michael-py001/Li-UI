@@ -7,6 +7,6 @@ export default {
   Rate:{},
   ConfirmPopup:{},
   F2Chart:{
-    include: ['Pie','Line']
+    include: ['Pie','Line','column']
   }
 }

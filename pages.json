@@ -43,6 +43,13 @@
         }
       },
       {
+        "path": "F2Chart/include/column",
+        "style": {
+          "navigationBarTitleText": "柱状图",
+          "enablePullDownRefresh": false
+        }
+      },
+      {
         "path": "Form/Form",
         "style": {
           "navigationBarTitleText": "Form表单",
