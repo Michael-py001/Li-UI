@@ -12,15 +12,19 @@
     <div class="LineChart" style="height:500rpx">
       <f2Vue  :onInit="basicLine3" />
     </div>
+    <Title name="圆滑曲线图"></Title>
+    <div class="LineChart" style="height:500rpx">
+      <f2Vue  :onInit="basicLine4" />
+    </div>
     <Title name="可拖动折线图 3.7.8"></Title>
     <div class="LineChart" style="height:500rpx">
       <f2Vue  :onInit="moveLine2" />
     </div>
     
-    <Title name="可拖动折线图-f2 3.2.3"></Title>
+    <!-- <Title name="可拖动折线图-f2 3.2.3"></Title>
     <div class="LineChart" style="height:500rpx">
       <ff-canvas id="lineChart" ref="chart" canvas-id="column" />
-    </div>
+    </div> -->
     
   </view>
 </template>
@@ -34,17 +38,7 @@
   // 基础折线图1
   const bacsicLine = (F2, config)=> {
       const chart = new F2.Chart(config);
-      const data = [
-        { value: 23.4, city: 'New York', date: '2011-10-01' },
-        { value: 86.7, city: 'Alaska', date: '2011-10-01' },
-        { value: 75.2, city: 'Austin', date: '2011-10-01' },
-        { value: 48, city: 'New York', date: '2011-10-02' },
-        { value: 44.9, city: 'Alaska', date: '2011-10-02' },
-        { value: 93.7, city: 'Austin', date: '2011-10-02' },
-        { value: 83.3, city: 'New York', date: '2011-10-03' },
-        { value: 59.1, city: 'Alaska', date: '2011-10-03' },
-        { value: 63.4, city: 'Austin', date: '2011-10-03' },
-      ];
+      const data = chartData.bacsicLine;
       chart.source(data, {
         date: {
           range: [0, 1],
@@ -66,157 +60,7 @@
     // 基础折线图2
     const bacsicLine2 = (F2, config)=> {
       const chart = new F2.Chart(config);
-      const data = [{
-        date: '2017-06-05',
-        value: 116
-      }, {
-        date: '2017-06-06',
-        value: 129
-      }, {
-        date: '2017-06-07',
-        value: 135
-      }, {
-        date: '2017-06-08',
-        value: 86
-      }, {
-        date: '2017-06-09',
-        value: 73
-      }, {
-        date: '2017-06-10',
-        value: 85
-      }, {
-        date: '2017-06-11',
-        value: 73
-      }, {
-        date: '2017-06-12',
-        value: 68
-      }, {
-        date: '2017-06-13',
-        value: 92
-      }, {
-        date: '2017-06-14',
-        value: 130
-      }, {
-        date: '2017-06-15',
-        value: 245
-      }, {
-        date: '2017-06-16',
-        value: 139
-      }, {
-        date: '2017-06-17',
-        value: 115
-      }, {
-        date: '2017-06-18',
-        value: 111
-      }, {
-        date: '2017-06-19',
-        value: 309
-      }, {
-        date: '2017-06-20',
-        value: 206
-      }, {
-        date: '2017-06-21',
-        value: 137
-      }, {
-        date: '2017-06-22',
-        value: 128
-      }, {
-        date: '2017-06-23',
-        value: 85
-      }, {
-        date: '2017-06-24',
-        value: 94
-      }, {
-        date: '2017-06-25',
-        value: 71
-      }, {
-        date: '2017-06-26',
-        value: 106
-      }, {
-        date: '2017-06-27',
-        value: 84
-      }, {
-        date: '2017-06-28',
-        value: 93
-      }, {
-        date: '2017-06-29',
-        value: 85
-      }, {
-        date: '2017-06-30',
-        value: 73
-      }, {
-        date: '2017-07-01',
-        value: 83
-      }, {
-        date: '2017-07-02',
-        value: 125
-      }, {
-        date: '2017-07-03',
-        value: 107
-      }, {
-        date: '2017-07-04',
-        value: 82
-      }, {
-        date: '2017-07-05',
-        value: 44
-      }, {
-        date: '2017-07-06',
-        value: 72
-      }, {
-        date: '2017-07-07',
-        value: 106
-      }, {
-        date: '2017-07-08',
-        value: 107
-      }, {
-        date: '2017-07-09',
-        value: 66
-      }, {
-        date: '2017-07-10',
-        value: 91
-      }, {
-        date: '2017-07-11',
-        value: 92
-      }, {
-        date: '2017-07-12',
-        value: 113
-      }, {
-        date: '2017-07-13',
-        value: 107
-      }, {
-        date: '2017-07-14',
-        value: 131
-      }, {
-        date: '2017-07-15',
-        value: 111
-      }, {
-        date: '2017-07-16',
-        value: 64
-      }, {
-        date: '2017-07-17',
-        value: 69
-      }, {
-        date: '2017-07-18',
-        value: 88
-      }, {
-        date: '2017-07-19',
-        value: 77
-      }, {
-        date: '2017-07-20',
-        value: 83
-      }, {
-        date: '2017-07-21',
-        value: 111
-      }, {
-        date: '2017-07-22',
-        value: 57
-      }, {
-        date: '2017-07-23',
-        value: 55
-      }, {
-        date: '2017-07-24',
-        value: 60
-      }];
+      const data = chartData.bacsicLine2;
       chart.source(data, {
         value: {
           tickCount: 5,
@@ -266,28 +110,7 @@
     
     // 带点折线图
     const basicLine3 = (F2,config)=>{
-      const data = [{
-        day: '周一',
-        value: 300
-      }, {
-        day: '周二',
-        value: 400
-      }, {
-        day: '周三',
-        value: 350
-      }, {
-        day: '周四',
-        value: 500
-      }, {
-        day: '周五',
-        value: 490
-      }, {
-        day: '周六',
-        value: 600
-      }, {
-        day: '周日',
-        value: 900
-      }];
+      const data = chartData.basicLine3;
       const chart = new F2.Chart(config);
       chart.source(data, {
         value: {
@@ -323,6 +146,47 @@
         stroke: '#fff',
         lineWidth: 1
       });
+      chart.render()
+      return chart
+    }
+    // 圆滑曲线图
+    const basicLine4 = (F2,config)=>{
+      const data = chartData.basicLine3;
+      const chart = new F2.Chart(config);
+      chart.source(data, {
+        value: {
+          tickCount: 5,
+          min: 0
+        },
+        day: {
+          range: [ 0, 1 ]
+        }
+      });
+      chart.tooltip({
+        showCrosshairs: true,
+        showItemMarker: false,
+        onShow: function onShow(ev) {
+          const items = ev.items;
+          items[0].name = null;
+          items[0].value = '$ ' + items[0].value;
+        }
+      });
+      chart.axis('day', {
+        label: function label(text, index, total) {
+          const textCfg = {};
+          if (index === 0) {
+            textCfg.textAlign = 'left';
+          } else if (index === total - 1) {
+            textCfg.textAlign = 'right';
+          }
+          return textCfg;
+        }
+      });
+      chart.line().position('day*value').shape('smooth');
+      // chart.point().position('day*value').style({
+      //   stroke: '#fff',
+      //   lineWidth: 1
+      // });
       chart.render()
       return chart
     }
@@ -517,7 +381,6 @@
         // F2.Chart.registerInteraction('pan', Pan);
         const chart = new F2.Chart(config);
         
-        console.log("chart:",chart)
         const dateList = ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月']
         chart.source(data, {
           y: {
@@ -608,36 +471,36 @@
 <script>
   // import F2 from '@antv/f2/dist/f2.min'
   // import F2 from '/wxcomponents/f2-canvas/lib/f2'
-  import F2 from '/wxcomponents/f2-canvas/lib/f2-es'
-  console.log("F2-es:",F2)
-  F2.Util.addEventListener = function (source, type, listener) {
-    source.addListener(type, listener);
-  };
+  // import F2 from '/wxcomponents/f2-canvas/lib/f2-es'
+  // console.log("F2-es:",F2)
+  // F2.Util.addEventListener = function (source, type, listener) {
+  //   source.addListener(type, listener);
+  // };
   
-  F2.Util.removeEventListener = function (source, type, listener) {
-    source.removeListener(type, listener);
-  };
+  // F2.Util.removeEventListener = function (source, type, listener) {
+  //   source.removeListener(type, listener);
+  // };
   
-  F2.Util.createEvent = function (event, chart) {
-    const type = event.type;
-    let x = 0;
-    let y = 0;
-    const touches = event.touches;
-    if (touches && touches.length > 0) {
-      x = touches[0].x;
-      y = touches[0].y;
-    }
+  // F2.Util.createEvent = function (event, chart) {
+  //   const type = event.type;
+  //   let x = 0;
+  //   let y = 0;
+  //   const touches = event.touches;
+  //   if (touches && touches.length > 0) {
+  //     x = touches[0].x;
+  //     y = touches[0].y;
+  //   }
   
-    return {
-      type,
-      chart,
-      x,
-      y
-    };
-  };
+  //   return {
+  //     type,
+  //     chart,
+  //     x,
+  //     y
+  //   };
+  // };
   export default {
     onLoad() {
-      this.$scope.selectComponent('#lineChart').init(this.moveLine)
+      // this.$scope.selectComponent('#lineChart').init(this.moveLine)
       // console.log(this.$scope.selectComponent('#lineChart'))
     },
     methods:{
@@ -841,7 +704,6 @@
         });
         // const chart = new F2.Chart(config);
         
-        console.log("chart:",chart)
         const dateList = ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月']
         chart.source(data, {
           y: {
