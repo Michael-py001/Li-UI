@@ -14,7 +14,7 @@
     }
   })
   const blockLength = computed(()=>{
-    return props.name.length * 30 + 'rpx'
+    return props.name.length * 13 + 'px'
   })
 </script>
 
