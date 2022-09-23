@@ -1,15 +1,9 @@
-<!--
- * @Author: Wushili
- * @Date: 2022-08-25 15:06:22
- * @LastEditors: Wushili
- * @LastEditTime: 2022-08-25 16:31:16
- * @Description: 
- * @FilePath: \匠腾d:\项目切图\优口净水器二期\sell-side\src\pages\Facility\page\DeviceCalc\components\F2-for-Vue\F2-for-Vue.vue
--->
 <template>
   <div class="F2-for-Vue">
     <canvas
       type="2d"
+      :id="canvasId"
+      :canvas-id="canvasId"
       class="f2-canvas"
       @touchstart="touchStart"
       @touchmove="touchMove"
@@ -22,24 +16,24 @@
 
 <script setup>
 import F2 from '@antv/f2/dist/f2-all.min';
-import {onMounted,ref,getCurrentInstance} from 'vue'
+import {wrapEvent , pixelRatio} from './utils.js'
+import {onBeforeMount,onMounted,ref,getCurrentInstance,computed} from 'vue'
 
 const instance = getCurrentInstance() //获取当前组件实例
 // import ScrollBar from '@antv/f2/lib/plugin/scroll-bar'
 // F2.Chart.plugins.register(ScrollBar);
 let _chart = null,
-    _canvasEl = null
+    _canvasEl = null,
+    canvasId = ref(''),
+    use2dCanvas = false
+    
+    
+ canvasId.value = `Li_${new Date().getTime()}`
+// #ifdef MP-WEIXIN || MP-TOUTIAO || MP-ALIPAY
+  use2dCanvas = true
+// #endif
 
-function wrapEvent(e) {
-  if (!e) return;
-  if (!e.preventDefault) {
-    e.preventDefault = function() {};
-  }
-  // if(!e.changedTouches && e.mp && e.mp.changedTouches) {
-  //   e['changedTouches'] = e.mp.changedTouches
-  // }
-  return e;
-}
+
 onMounted(()=>{
  if(props.onInit) {
    init()
@@ -70,25 +64,44 @@ async function init(config={}) {
   }
 }
 function getContext() {
-  return new Promise((resolve,reject)=>{
-    const query = wx.createSelectorQuery().in(instance);
-    query.select('.f2-canvas')
-      .fields({
-        node: true,
-        size: true
-      })
-      .exec(res => {
-        const { node, width, height } = res[0];
-        const context = node.getContext('2d');
-        const pixelRatio = wx.getSystemInfoSync().pixelRatio;
-        // 高清设置
-        node.width = width * pixelRatio;
-        node.height = height * pixelRatio;
-        let config = { context, width, height, pixelRatio, canvas:node}
-        resolve(config)
-    });
-  })
-}
+  if(use2dCanvas) { //使用2d
+    return new Promise((resolve,reject)=>{
+      const query = uni.createSelectorQuery().in(instance);
+      query.select(`#${canvasId.value}`)
+        .fields({
+          node: true,
+          size: true
+        })
+        .exec(res => {
+          const { node, width, height } = res[0];
+          const context = node.getContext('2d');
+          // 高清设置
+          node.width = width * pixelRatio;
+          node.height = height * pixelRatio;
+          let config = { context, width, height, pixelRatio, canvas:node}
+          resolve(config)
+      });
+    })
+  }
+  else {
+    return new Promise((resolve,reject)=>{
+      const query = uni.createSelectorQuery().in(instance);
+      query.select(`#${canvasId.value}`)
+        .boundingClientRect()
+        .exec(res => {
+          const { width = 300, height=300 } = res[0];
+          const context = uni.createCanvasContext(canvasId.value, instance);
+          let config = { 
+            context:context, 
+            width, 
+            height, 
+            pixelRatio
+          }
+          resolve(config)
+      });
+    })
+  }
+}  
 function touchStart(e) {
   const canvasEl = _canvasEl;
   if (!canvasEl) {
