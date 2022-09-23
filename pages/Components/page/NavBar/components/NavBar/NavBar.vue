@@ -1,6 +1,6 @@
 <template>
 	<div class="custom-nav-warp" :style="wrapStyle">
-      <div class="nav-fix" :style="{'color':titleColor,...customNavStyle}" >
+     <div class="nav-fix" :style="customNavStyle" >
         <view class="content">
           <div  class="btn-warp" v-if="showBack">
           	<div class="btn back"  @click="$nav('back')" >
@@ -103,7 +103,7 @@
 				   
 				}
          // return `padding-top:${padding_top}px;height:${this.navHeight}px;${bg};`
-         return `padding-bottom:${this.gapHeight/2}px; padding-top:${padding_top}px;height:${this.navHeight + this.gapHeight/2}px;${bg};`
+         return `color:${this.titleColor};padding-bottom:${this.gapHeight/2}px; padding-top:${padding_top}px; height:${this.navHeight + this.gapHeight/2}px ;${bg}`
 			},
 		},
 		methods: {

@@ -1,6 +1,6 @@
 <template>
   <view class="form" :style="{padding:padding}">
-    <view class="form-input" :style="{...formInputStyle}">
+    <view class="form-input" :style="formInputStyle">
       <view class="label" :style="labelStyle">
         <view class="must" v-if="must">
           *
