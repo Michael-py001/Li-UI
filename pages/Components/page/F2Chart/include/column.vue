@@ -51,6 +51,7 @@
       column4 = ref(''),
       column5 = ref(''),
       column6 = ref('')
+
   
   const createBacsicColumn = (config)=>{
     bacsicColumn.value.init((config)=>{
@@ -296,8 +297,8 @@
       return chart;
     })
   }
-  const createColumn6 = (config)=>{
-    column6.value.init(async (config)=>{
+  const createColumn6 = ()=>{
+    column6.value.init( (config)=>{
       const chart = new F2.Chart(config)
       const data = chartData.column5;
       chart.source(data, {
@@ -317,23 +318,27 @@
       // 创建纹理对象
       // 获取 canvas 上下文对像
       const ctx = chart.get('canvas').get('context');
-      let {canvas} = config
-      console.log("canvas:",canvas)
-      const canvasImg = canvas.createImage();
-      await new Promise(async (resolve, reject) => {
-        canvasImg.onload = (e) => {
-          const pattern = ctx.createPattern(canvasImg, 'repeat');
-          chart.interval().position('year*sales').color(pattern);
-          chart.render();
-          resolve()
-        }
-        canvasImg.onerror = (e) => {
-          console.error('err:', e)
-          reject()
-        }
-        canvasImg.src = 'https://gw.alipayobjects.com/zos/rmsportal/cNOctfQVgZmwaXeBITuD.jpg'
-        // canvasImg.src = await this.DownloadFile(url)
-      })
+      // #ifdef H5
+        const canvasImg = new Image(100,100);
+      // #endif
+      // #ifdef MP-WEIXIN
+        let {canvas} = config
+        const canvasImg = canvas.createImage();
+      // #endif
+      canvasImg.onload = (e) => {
+        // #ifdef H5
+        const pattern = ctx.createPattern('/static/Chart/test.jpg', 'repeat');
+        // #endif
+        // #ifdef MP-WEIXIN
+        const pattern = ctx.createPattern(canvasImg, 'repeat');
+        // #endif
+        chart.interval().position('year*sales').color(pattern);
+        chart.render();
+      }
+      canvasImg.onerror = (e) => {
+        console.error('err:', e)
+      }
+      canvasImg.src = '/static/Chart/test.jpg' //'https://gw.alipayobjects.com/zos/rmsportal/cNOctfQVgZmwaXeBITuD.jpg'
       return chart;
     })
   }
