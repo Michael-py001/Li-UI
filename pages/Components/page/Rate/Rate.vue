@@ -29,7 +29,7 @@
     fillIcon="https://s1.ax1x.com/2022/08/24/vg9L80.png" 
     emptyIcon="https://s1.ax1x.com/2022/08/24/vg9qCq.png"
     :activeNum="4" 
-    size="45" :
+    size="45"
     :disabled="false" 
     @change="change"></Rate>
     <view class="gap"></view>
@@ -37,7 +37,7 @@
     fillIcon="https://s1.ax1x.com/2022/08/24/vgCaIs.png" 
     emptyIcon="https://s1.ax1x.com/2022/08/24/vgCUaj.png"
     :activeNum="4" 
-    size="55" :
+    size="55"
     :disabled="false" 
     @change="change"></Rate>
     <view class="gap"></view>
