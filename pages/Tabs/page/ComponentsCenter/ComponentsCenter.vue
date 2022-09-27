@@ -23,6 +23,7 @@
     <view class="box">
       <Title name="活动组件"></Title>
       <Item name="LucyWheel 幸运转盘" url="Components.LucyWheel"></Item>
+      <Item name="LuckyMoney 红包" url="Components.LuckyMoney"></Item>
     </view>
     <view class="box">
       <Title name="其他组件"></Title>

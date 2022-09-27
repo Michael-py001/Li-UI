@@ -2,13 +2,13 @@
   "pages": [{
     "path": "pages/Tabs/page/ComponentsCenter/ComponentsCenter",
     "style": {
-      "navigationBarTitleText": "",
+      "navigationBarTitleText": "组件",
       "enablePullDownRefresh": false
     }
   }, {
     "path": "pages/Tabs/page/User/User",
     "style": {
-      "navigationBarTitleText": "",
+      "navigationBarTitleText": "我的",
       "enablePullDownRefresh": false
     }
 
@@ -100,6 +100,13 @@
           "navigationBarTitleText": "幸运转盘",
           "enablePullDownRefresh": false
         }
+      }, {
+        "path": "LuckyMoney/LuckyMoney",
+        "style": {
+          "navigationBarTitleText": "红包",
+          "enablePullDownRefresh": false
+        }
+
       }
     ]
   }],
