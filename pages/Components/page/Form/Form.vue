@@ -29,7 +29,7 @@
         <ChooseImages  :border="true" label="上传截图(横向)" labelWidth="230" deleteIconType='two' :limitNum="5"  v-model="imgList"></ChooseImages>
         <IDCardUpload direction="column" v-model="idCardList"  deleteIconType='two' label="请上传您的有效身份证"></IDCardUpload>
         <TextareaInput direction="row" labelWidth="180" label="简介(横向)" holderPlaceText="请输入简介" v-model="detail"></TextareaInput>
-        <TextareaInput   direction="colunm" label="简介(纵向)" holderPlaceText="请输入简介" v-model="detail"></TextareaInput>
+        <TextareaInput   direction="colunm" :border="false" label="简介(纵向)" holderPlaceText="请输入简介" v-model="detail"></TextareaInput>
     </view>
   </view>
 </template>

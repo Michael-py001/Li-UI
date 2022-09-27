@@ -26,20 +26,22 @@
     
     <Title name="自定义图案"></Title>
     <Rate 
-    fillIcon="https://s1.ax1x.com/2022/08/24/vg9L80.png" 
-    emptyIcon="https://s1.ax1x.com/2022/08/24/vg9qCq.png"
-    :activeNum="4" 
-    size="45"
-    :disabled="false" 
-    @change="change"></Rate>
+      fillIcon="https://s1.ax1x.com/2022/08/24/vg9L80.png" 
+      emptyIcon="https://s1.ax1x.com/2022/08/24/vg9qCq.png"
+      :activeNum="4" 
+      size="45"
+      :disabled="false" 
+      @change="change"
+    ></Rate>
     <view class="gap"></view>
     <Rate
-    fillIcon="https://s1.ax1x.com/2022/08/24/vgCaIs.png" 
-    emptyIcon="https://s1.ax1x.com/2022/08/24/vgCUaj.png"
-    :activeNum="4" 
-    size="55"
-    :disabled="false" 
-    @change="change"></Rate>
+      fillIcon="https://s1.ax1x.com/2022/08/24/vgCaIs.png" 
+      emptyIcon="https://s1.ax1x.com/2022/08/24/vgCUaj.png"
+      :activeNum="4" 
+      size="55"
+      :disabled="false" 
+      @change="change"
+    ></Rate>
     <view class="gap"></view>
     <Title name="禁用状态"></Title>
     <Rate :activeNum="3" size="45" :disabled="true" @change="change"></Rate>
@@ -52,7 +54,7 @@
   import Rate from './components/Rate/Rate'
   
   const change = (value)=>{
-    console.log(value)
+    // console.log(value)
   }
 </script>
 

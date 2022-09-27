@@ -15,7 +15,7 @@ button {
 	background-color: #FFFF;
 }
 button::after {
-	border: none;
+	border: none !important;
 }
 image {
 	vertical-align: middle;
