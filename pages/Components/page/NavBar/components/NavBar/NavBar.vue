@@ -72,10 +72,11 @@
         return str
       },
 			customNavStyle() {
-				let bg = ''
-				let padding_top =  this.statusBarHeight
-        let bgImage = ''
-        let position = ''
+				let str = '',
+            bg = '',
+            padding_top =  this.statusBarHeight,
+            bgImage = '',
+            position = ''
 				if(this.isNearTop) {
           if(this.changeColor) {
             if(this.changeColor.includes('gradient')) {
@@ -84,9 +85,7 @@
             else {
                bg = `background-color:${this.changeColor};`
             }
-           
           }
-				  padding_top = this.statusBarHeight
 				}
 				if(!this.isNearTop) {
           if(this.backgroundColor) {
@@ -100,10 +99,21 @@
           else {
             bg = 'background-color:transparent;'
           }
-				   
 				}
-         // return `padding-top:${padding_top}px;height:${this.navHeight}px;${bg};`
-         return `color:${this.titleColor};padding-bottom:${this.gapHeight/2}px; padding-top:${padding_top}px; height:${this.navHeight + this.gapHeight/2}px ;${bg}`
+        str += bg
+        if(this.titleColor) {
+          str += `color:${this.titleColor};`
+        }
+        str += `padding-top:${padding_top}px;`
+        // #ifdef MP-WEIXIN
+        str += `padding-bottom:${this.gapHeight/2}px;`
+        str += `height:${this.navHeight+ this.gapHeight/2}px;`
+        // #endif
+        
+        // #ifndef MP-WEIXIN
+         str += `height:${this.navHeight}px;`
+        // #endif
+         return str
 			},
 		},
 		methods: {
