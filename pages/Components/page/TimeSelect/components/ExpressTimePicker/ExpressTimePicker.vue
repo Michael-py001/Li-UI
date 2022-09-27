@@ -1,8 +1,8 @@
 <template>
   <view class="ExpressTimePicker">
-    <view  v-if="show" :class="{'show':aniMaskShow}" class="mask" @click.stop="closeHandler"></view>
+    <view  v-if="_show" :class="{'show':aniMaskShow}" class="mask" @click.stop="closeHandler"></view>
     <!-- <u-popup :show="show" @close="closeHandler" mode="bottom" height="800" border-radius="24" > -->
-    <view class="main" :class="{'show':aniMaskShow}" v-if="show" >
+    <view class="main" :class="{'show':aniMaskShow}" v-if="_show" >
       <view class="title">
         <view class="name">
           选择上门时间
@@ -42,6 +42,10 @@
   import dayjs from 'dayjs'
   export default {
     props:{
+      show:{
+        type:Boolean,
+        default:false 
+      },
       shake:{
         type:Boolean,
         default:false  //是否开启震动
@@ -63,11 +67,16 @@
          showToday:true,
          date:'',
          time:'',
-         show:false,
+         _show:false,
          aniMaskShow:false
        }
      },
     watch:{
+      show(value) {
+        if(value) {
+          this.open()
+        }
+      },
       activeTab(value) {
         this.selectLabel = this.timeList[this.valueArr].label
         let date = ''
@@ -78,7 +87,6 @@
           date = dayjs().add(1, 'day').format('YYYY-MM-DD')
         }
         this.date = date
-        console.log("date:",date)
         this.$emit('change',{
           date:date,
           time:this.timeList[this.valueArr].value,
@@ -134,8 +142,7 @@
      },
      methods: {
        open() {
-         console.log("open")
-         this.show = true
+         this._show = true
          setTimeout(()=>{
            this.$nextTick(()=>{
              this.aniMaskShow = true
@@ -143,18 +150,15 @@
          },50)
        },
        close() {
-        console.log("close")
          this.aniMaskShow = false
          setTimeout(()=>{
            this.$nextTick(()=>{
-             this.show = false
-             console.log("this.show:",this.show)
+             this._show = false
            })
          },300)
          this.$emit('close')
        },
        closeHandler() {
-         console.log("closeHandler")
          if(this.closeOnClickOverlay) {
            this.close()
          }
@@ -236,7 +240,6 @@
            else if(this.activeTab==1) {
              date = dayjs().add(1, 'day').format('YYYY-MM-DD')
            }
-           console.log("日期:",date,this.timeList[this.valueArr].value)
            this.$emit('change',{
              date:date,
              time:this.timeList[this.valueArr].value,
