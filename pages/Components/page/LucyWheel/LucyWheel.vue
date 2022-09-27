@@ -33,6 +33,22 @@
         <u-slider v-model="getPercent" activeColor="#194ce5" inactiveColor="#c0c4cc" showValue/>
       </view>
     </view>
+    <view class="row">
+      <view class="label">
+        自动抽奖：
+      </view>
+      <view style="flex:1">
+        <switch :checked="autoBegin" @change="onAutoBegin" color="#194ce5"></switch>
+      </view>
+    </view>
+    <view class="row">
+      <view class="label">
+        是否禁用：
+      </view>
+      <view style="flex:1">
+        <switch :checked="disabled" @change="onDisabled" color="#194ce5"></switch>
+      </view>
+    </view>
     <Item name="开始抽奖!" @click="ZhuanPanShow=true"></Item>
     <LucyWheel 
     :popupShow="ZhuanPanShow" 
@@ -42,6 +58,8 @@
     :totalTime="totalTime"
     :rollNum="rollNum"
     :getPercent="getPercent"
+    :autoBegin="autoBegin"
+    :disabled="disabled"
     @finish="ZhuanPanFinish" 
     @close="ZhuanPanShow=false">
     </LucyWheel>
@@ -49,7 +67,7 @@
 </template>
 
 <script setup>
-  import LucyWheel from './components/LucyWheel.vue'
+  import LucyWheel from './components/LucyWheel/LucyWheel.vue'
   import Title from '@/components/MainUI/Title.vue'
   import Item from '@/components/MainUI/Item.vue'
   import {ref} from 'vue'
@@ -63,14 +81,22 @@
         getPercent = ref(99), //中奖概率
         getIndex = ref(1), //中奖第几位
         totalTime = ref(5), //总耗时
-        rollNum = ref(5) //总圈数
+        rollNum = ref(5), //总圈数
+        autoBegin = ref(true), 
+        disabled = ref(false) 
         
   const ZhuanPanFinish = ({isGet})=>{
     uni.showToast({
       title:isGet?`恭喜你中奖了!`:`谢谢惠顾!`,
       icon:'none'
     })
-    
+  }
+  
+  const onAutoBegin = ({detail:{value}})=>{
+    autoBegin.value = value
+  }
+  const onDisabled = ({detail:{value}})=>{
+    disabled.value = value
   }
  
         

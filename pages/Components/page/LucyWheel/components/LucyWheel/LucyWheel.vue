@@ -17,9 +17,7 @@
           <image class="btn" src="/static/LucyWheel/pan-btn.png" mode="aspectFill" @click="clickStart"></image>
          <image class="light" 
             src="/static/LucyWheel/light.gif" mode="aspectFill"></image>
-          <!-- <image class="light" :style="{'display':lightTwoShow?'block':'none'}"
-            src="http://hongren-online.oss-cn-guangzhou.aliyuncs.com/2021111118594856e862318.png" mode="aspectFill"></image> -->
-          <image class="close" src="/static/LucyWheel/close.png" mode="aspectFill" @click.stop="closePopup"></image>
+          <image class="close" v-show="!running" src="/static/LucyWheel/close.png" mode="aspectFill" @click.stop="closePopup"></image>
 
         </view>
       </view>
@@ -45,6 +43,14 @@
       //中奖概率
       getPercent:{ 
         default:50
+      },
+      // 自动抽奖
+      autoBegin:{
+        default:true
+      },
+      // 禁用
+      disabled:{
+        default:false
       },
       // 控制显示
       popupShow:{
@@ -78,9 +84,11 @@
       popupShow(bool){
         if(bool) {
           this.totalDeg = 0
-          setTimeout(()=>{
-            this.clickStart()
-          },1000)
+          if(this.autoBegin) {
+            setTimeout(()=>{
+              this.clickStart()
+            },800)
+          }
         }
       }
     },
@@ -137,7 +145,7 @@
         
       },
       async clickStart() {
-        if (this.running) return
+        if (this.running || this.disabled) return
         if(!this.running && this.animateRunning) {
           this.animateRunning = false
           await new Promise(resolve=>{
