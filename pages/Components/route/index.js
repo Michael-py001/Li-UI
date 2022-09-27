@@ -8,5 +8,6 @@ export default {
   ConfirmPopup:{},
   F2Chart:{
     include: ['Pie','Line','column']
-  }
+  },
+  LucyWheel:{}
 }

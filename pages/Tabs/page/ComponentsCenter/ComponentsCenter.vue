@@ -21,6 +21,10 @@
       <Item name="echart 百度图表" url="Components.ConfirmPopup"></Item>
     </view>
     <view class="box">
+      <Title name="活动组件"></Title>
+      <Item name="LucyWheel 幸运转盘" url="Components.LucyWheel"></Item>
+    </view>
+    <view class="box">
       <Title name="其他组件"></Title>
       <Item name="PageEnd 列表页加载状态" url="Components.PageEnd"></Item>
     </view>

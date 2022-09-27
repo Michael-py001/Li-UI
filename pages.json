@@ -18,8 +18,7 @@
   },
   "subPackages": [{
     "root": "pages/Components/page",
-    "pages": [
-      {
+    "pages": [{
         "path": "F2Chart/F2Chart",
         "style": {
           "navigationBarTitleText": "antv F2 蚂蚁图表",
@@ -32,14 +31,11 @@
           "navigationBarTitleText": "饼图",
           "enablePullDownRefresh": false
         }
-      },{
+      }, {
         "path": "F2Chart/include/Line",
         "style": {
           "navigationBarTitleText": "折线图",
-          "enablePullDownRefresh": false,
-          "usingComponents":{
-            "ff-canvas": "/wxcomponents/f2-canvas/f2-canvas"
-          }
+          "enablePullDownRefresh": false
         }
       },
       {
@@ -97,7 +93,13 @@
           "navigationBarTitleText": "确认弹窗",
           "enablePullDownRefresh": false
         }
-
+      },
+      {
+        "path": "LucyWheel/LucyWheel",
+        "style": {
+          "navigationBarTitleText": "幸运转盘",
+          "enablePullDownRefresh": false
+        }
       }
     ]
   }],
@@ -137,9 +139,9 @@
     "app-plus": {
       "background": "#efeff4"
     }
-    
+
   },
- 
+
   "condition": { //模式配置，仅开发期间生效
     "current": 0, //当前激活的模式(list 的索引项)
     "list": [{
