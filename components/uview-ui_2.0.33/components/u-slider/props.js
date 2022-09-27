@@ -15,11 +15,20 @@ export default {
             type: [Number, String],
             default: uni.$u.props.slider.step
         },
+        // #ifdef VUE2
         // 当前取值
         value: {
             type: [Number, String],
             default: uni.$u.props.slider.value
         },
+        // #endif
+        // #ifdef VUE3
+        modelValue: {
+            type: [Number, String],
+            default: uni.$u.props.slider.value
+        },
+        // #endif
+       
         // 滑块右侧已选择部分的背景色
         activeColor: {
             type: String,

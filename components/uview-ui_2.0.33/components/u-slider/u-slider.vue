@@ -7,7 +7,7 @@
 			:min="min"
 			:max="max"
 			:step="step"
-			:value="value"
+			:value="value || modelValue"
 			:activeColor="activeColor"
 			:inactiveColor="inactiveColor"
 			:blockSize="$u.getPx(blockSize)"
@@ -32,7 +32,14 @@
 					value
 				} = e.detail
 				// 更新v-model的值
-				this.$emit('input', value)
+				
+        // #ifdef VUE2
+        this.$emit('input', value)
+        // #endif
+        
+        // #ifdef VUE3
+        this.$emit('update:modelValue', value)
+        // #endif
 				// 触发事件
 				this.$emit('changing', value)
 			},
@@ -42,7 +49,13 @@
 					value
 				} = e.detail
 				// 更新v-model的值
+				// #ifdef VUE2
 				this.$emit('input', value)
+				// #endif
+				
+				// #ifdef VUE3
+				this.$emit('update:modelValue', value)
+				// #endif
 				// 触发事件
 				this.$emit('change', value)
 			}
