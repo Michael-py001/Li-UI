@@ -67,7 +67,7 @@
 </template>
 
 <script setup>
-  import LucyWheel from './components/LucyWheel/LucyWheel.vue'
+  import LucyWheel from '@/pages/Components/components/LucyWheel/LucyWheel.vue'
   import Title from '@/components/MainUI/Title.vue'
   import Item from '@/components/MainUI/Item.vue'
   import {ref} from 'vue'

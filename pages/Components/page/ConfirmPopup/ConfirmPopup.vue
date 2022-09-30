@@ -33,7 +33,7 @@
 <script setup>
   import Title from '@/components/MainUI/Title.vue'
   import Item from '@/components/MainUI/Item.vue'
-  import ConfirmPopup from './components/ConfirmPopup/ConfirmPopup'
+  import ConfirmPopup from '@/pages/Components/components/ConfirmPopup/ConfirmPopup'
   let show1 = $ref(false),
       show2 = $ref(false),
       show3 = $ref(false),

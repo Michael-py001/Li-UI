@@ -51,7 +51,7 @@
 
 <script setup>
   import Title from '@/components/MainUI/Title.vue'
-  import Rate from './components/Rate/Rate'
+  import Rate from '@/pages/Components/components/Rate/Rate'
   
   const change = (value)=>{
     // console.log(value)

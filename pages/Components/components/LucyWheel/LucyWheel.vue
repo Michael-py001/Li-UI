@@ -189,12 +189,10 @@
   }
 </script>
 
-// <script setup>
-//   import {ref} from 'vue' 
-  
-//   let color2 = ref('red'),
-//       total_deg = ref(1000)
-// </script>
+<script setup>
+  // TODO
+  // 此处是uniapp的v-bind的bug，修复后删除
+</script>
 <style lang="scss">
 
   .test {

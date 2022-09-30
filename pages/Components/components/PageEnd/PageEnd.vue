@@ -10,12 +10,14 @@
       <image class="icon" src="/static/PageEnd/nomore.png" mode="aspectFill"></image>
     </view>
     <view class="loading" v-if="type==='loading'">
-      <text>{{loadingText}}</text>
+      <Loading></Loading>
+      <text class="loading-text">{{loadingText}}</text>
     </view>
 	</view>
 </template>
 
 <script>
+  import Loading from '../Loading/Loading'
   // <li-PageEnd :type='loadingText'></li-PageEnd> 
   // <li-PageEnd :type='page_end_type' noDataText="暂无订单噢~"></li-PageEnd>
   /**
@@ -24,6 +26,9 @@
       loadingText3:'noData'
    * */
 	export default {
+    components:{
+      Loading
+    },
 		props: {
 			// noData noMore loading
 			type:{
@@ -88,13 +93,11 @@
 			font-size: 26rpx;
 			color: #b2b2b2;
 			text-align: center;
-      .bottom-img {
-        margin: 32rpx 0;
-        text-align: center;
-        image {
-          width: 404rpx;
-          height: 32rpx;
-        }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &-text {
+        margin-left: 12rpx;
       }
 		}
 	}

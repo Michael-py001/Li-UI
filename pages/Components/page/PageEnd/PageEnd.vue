@@ -18,7 +18,7 @@
 
 <script setup>
   import Title from '@/components/MainUI/Title.vue'
-  import PageEnd from './components/PageEnd/PageEnd'
+  import PageEnd from '@/pages/Components/components/PageEnd/PageEnd'
   import {useListPage} from '@/share/ListPage.js'
   
   let {GetList,RefreshList, page_end_type,list}  = useListPage()

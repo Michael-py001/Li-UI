@@ -26,7 +26,7 @@
 
 <script>
   // simple :<ChooseExpressTime shake label="期望上门时间" labelWidth="230" :value="expressTime" @change="expressTimeChange"></ChooseExpressTime>
-  import ExpressTimePicker from '../../TimeSelect/components/ExpressTimePicker/ExpressTimePicker'
+  import ExpressTimePicker from '../ExpressTimePicker/ExpressTimePicker'
   import dayjs from 'dayjs'
   export default {
     components:{

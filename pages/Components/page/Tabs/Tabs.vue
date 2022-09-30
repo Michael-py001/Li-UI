@@ -25,7 +25,7 @@
 </template>
 
 <script setup>
-  import TopTabs from './components/TopTabs/TopTabs'
+  import TopTabs from '@/pages/Components/components/TopTabs/TopTabs'
   import Title from '@/components/MainUI/Title.vue'
   
   

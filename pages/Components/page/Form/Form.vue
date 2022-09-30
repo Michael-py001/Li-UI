@@ -35,15 +35,15 @@
 </template>
 
 <script setup>
-  import TextInput from './components/TextInput'
-  import ChoosePopup from './components/ChoosePopup'
-  import ChooseImages from './components/ChooseImages'
-  import IDCardUpload from './components/IDCardUpload'
-  import TextareaInput from './components/TextareaInput'
-  import AddressSelect from './components/AddressSelect'
-  import TemplateSlot from './components/TemplateSlot'
-  import ChooseNumber from './components/ChooseNumber'
-  import ChooseExpressTime from './components/ChooseExpressTime'
+  import TextInput from '@/pages/Components/components/TextInput/TextInput'
+  import ChoosePopup from '@/pages/Components/components/ChoosePopup/ChoosePopup'
+  import ChooseImages from '@/pages/Components/components/ChooseImages/ChooseImages'
+  import IDCardUpload from '@/pages/Components/components/IDCardUpload/IDCardUpload'
+  import TextareaInput from '@/pages/Components/components/TextareaInput/TextareaInput'
+  import AddressSelect from '@/pages/Components/components/AddressSelect/AddressSelect'
+  import TemplateSlot from '@/pages/Components/components/TemplateSlot/TemplateSlot'
+  import ChooseNumber from '@/pages/Components/components/ChooseNumber/ChooseNumber'
+  import ChooseExpressTime from '@/pages/Components/components/ChooseExpressTime/ChooseExpressTime'
   import dayjs from 'dayjs'
   let sexList =[
         {

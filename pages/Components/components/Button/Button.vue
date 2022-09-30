@@ -18,7 +18,7 @@
 </template>
 
 <script>
-  import Loading from '@/pages/Components/components/Loading/Loading'
+  import Loading from '../Loading/Loading'
 	export default {
     components:{
       Loading

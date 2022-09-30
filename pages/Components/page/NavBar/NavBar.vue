@@ -18,7 +18,7 @@
 
 <script setup>
   import {watch} from 'vue'
-  import NavBar from './components/NavBar/NavBar'
+  import NavBar from '@/pages/Components/components/NavBar/NavBar'
   import {useNavHeight} from '@/share/NavHeight.js'
   import {onLoad, onPageScroll} from '@dcloudio/uni-app'
   import Item from '@/components/MainUI/Item.vue'

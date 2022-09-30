@@ -11,10 +11,18 @@
     </view>
     <view class="row">
       <view class="label">
+        单位：
+      </view>
+      <view style="flex:1">
+        <input type="text" placeholder="单位" v-model="unit">
+      </view>
+    </view>
+    <view class="row">
+      <view class="label">
         封面标题：
       </view>
       <view style="flex:1">
-        <input type="text" placeholder="封面文案" v-model="frontTitle">
+        <input type="text" placeholder="封面标题" v-model="frontTitle">
       </view>
     </view>
     <view class="row">
@@ -38,7 +46,23 @@
         按钮文案：
       </view>
       <view style="flex:1">
-        <input type="text" placeholder="背部副标题" v-model="btnTitle">
+        <input type="text" placeholder="按钮文案" v-model="btnTitle">
+      </view>
+    </view>
+    <view class="row">
+      <view class="label">
+        总转数：
+      </view>
+      <view style="flex:1">
+        <u-slider min="1" max="10" v-model="rollNum" activeColor="#194ce5" inactiveColor="#c0c4cc" showValue/>
+      </view>
+    </view>
+    <view class="row">
+      <view class="label">
+        总耗时：
+      </view>
+      <view style="flex:1">
+        <u-slider min="1" max="10" v-model="totalTime" activeColor="#194ce5" inactiveColor="#c0c4cc" showValue/>
       </view>
     </view>
     <Item name="拆红包" @click="HongBaoShow=true"></Item>
@@ -49,27 +73,32 @@
       :backTitleTwo="backTitleTwo"
       :frontTitle="frontTitle"
       :btnTitle="btnTitle"
-      :popupShow="HongBaoShow" 
+      :popupShow="HongBaoShow"
+       :totalTime="totalTime"
+       :rollNum="rollNum"
+       :unit="unit"
       @close="closeHongBao" 
     />
   </view>
 </template>
 
 <script setup>
-  import LuckyMoney from './components/LuckyMoney/LuckyMoney.vue'
+  import LuckyMoney from '@/pages/Components/components/LuckyMoney/LuckyMoney.vue'
   import Title from '@/components/MainUI/Title.vue'
   import Item from '@/components/MainUI/Item.vue'
-  import {ref} from 'vue'
+  import {ref,onUpdated ,onBeforeUpdate} from 'vue'
   
   let HongBaoShow = ref(false),
       HongBaoNum = ref(888),
       backTitleOne = ref('获得红包金额'),
       backTitleTwo = ref('- 红包已存入余额 -'),
       btnTitle = ref('开心收下红包'),
-      frontTitle = ref('红包奖励')
+      frontTitle = ref('红包奖励'),
+      unit = ref('元'),
+      rollNum = ref(2),
+      totalTime = ref(1)
       
   const closeHongBao = ()=>{
-    console.log("closeHongBao")
     HongBaoShow.value = false
   }
 </script>

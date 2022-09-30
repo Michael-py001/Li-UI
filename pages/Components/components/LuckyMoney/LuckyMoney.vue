@@ -14,7 +14,7 @@
                   {{backTitleOne}}
                 </view>
                 <view class="red mar-top">
-                  <text class="big">{{money}}</text>元
+                  <text class="big">{{money}}</text>{{unit}}
                 </view>
                 <view class="gold">
                   {{backTitleTwo}}
@@ -28,7 +28,7 @@
         </view>
         <image :style="{'opacity':closeShow?1:0}" class="close" src="/static/LucyWheel/close.png" mode="aspectFill"
           @click.stop="$emit('close')"/>
-          <view class="front-wrap-wrap" :class="{'open':openAnimate}">
+          <view class="front-wrap-wrap" :class="{'open':openAnimate,'get':getAnimate,'isOneNum':rollNum==1}">
             <view class="front">
               <view class="front-wrap">
                 <view class="front-title">
@@ -68,8 +68,20 @@
       btnTitle:{
         default:'开心收下红包'
       },
+      // 单位
+      unit:{
+        default:''
+      },
       popupShow: {
         default: false,
+      },
+      // 总耗时
+      totalTime:{
+        default:1
+      },
+      // 总圈数
+      rollNum:{
+        default:1
       }
     },
     data() {
@@ -120,7 +132,10 @@
     }
   }
 </script>
-
+<script setup>
+  // TODO
+  // 此处是uniapp的v-bind的bug，修复后删除
+</script>
 <style lang="scss" scoped>
   .popup-wrap {
     position: fixed;
@@ -196,26 +211,51 @@
       height: 622rpx;
       transition: all;
       z-index: 1;
-
+      &.get {
+        -webkit-transform-style: flat;
+        -webkit-transform-origin: center;
+        -webkit-animation: leave 1s ease-in-out 0s 1 normal forwards;
+        -webkit-backface-visibility: hidden;
+        -webkit-animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+      }
+      
+      @keyframes leave {
+        0% {
+          transform: translateY(0rpx);
+        }
+      
+        20% {
+          transform: translateY(-100rpx);
+        }
+      
+        100% {
+          transform: translateY(2000rpx);
+          // z-index: 0;
+          // opacity: 0;
+        }
+      }
       // -webkit-transform: rotateY(180deg);
       &.open {
         -webkit-transform-style: flat;
         -webkit-transform-origin: center;
-        -webkit-animation: front 0.5s linear 0s 1 normal forwards;
-        -webkit-backface-visibility: hidden;
-        -webkit-animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        -webkit-animation: front calc(v-bind(totalTime) * 1s) ease-in-out 0s 1 normal forwards;
+        &.isOneNum {
+          -webkit-backface-visibility: hidden;
+        }
+        // -webkit-animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
       }
 
       @keyframes front {
         0% {
           transform: rotateY(0);
           // opacity: 1;
+          // opacity: 0;
         }
 
         100% {
-          transform: rotateY(180deg);
+          transform: rotateY(calc(v-bind(rollNum) * 360deg - 180deg));
           z-index: -1;
-          opacity: 0;
+          // opacity: 0;
         }
       }
 
@@ -261,9 +301,9 @@
             &.bigAnimate {
               -webkit-transform-style: flat;
               -webkit-transform-origin: center;
-              -webkit-animation: big 0.5s linear 0s infinite alternate;
+              -webkit-animation: big 0.5s ease-out 0s infinite alternate;
               -webkit-backface-visibility: hidden;
-              -webkit-animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+              // -webkit-animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
             }
 
             @keyframes big {
@@ -295,15 +335,15 @@
         -webkit-transform: rotateY(180deg);
         -webkit-transform-style: flat;
         -webkit-transform-origin: center;
-        -webkit-animation: back 0.5s linear 0s 1 normal forwards;
+        -webkit-animation: back calc(v-bind(totalTime) * 1s)  ease-in-out 0s 1 normal forwards;
         -webkit-backface-visibility: hidden;
-        -webkit-animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        // -webkit-animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
       }
 
       &.get {
         -webkit-transform-style: flat;
         -webkit-transform-origin: center;
-        -webkit-animation: leave 1s linear 0s 1 normal forwards;
+        -webkit-animation: leave 1s ease-in-out 0s 1 normal forwards;
         -webkit-backface-visibility: hidden;
         -webkit-animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
       }
@@ -330,7 +370,8 @@
         }
 
         100% {
-          transform: rotateY(0deg);
+          // transform: rotateY(-360deg);
+          transform: rotateY(calc(v-bind(rollNum) * 360deg));
           // z-index: 1;
         }
       }
@@ -458,7 +499,7 @@
                 .text {
                   line-height: 42upx;
                   font-size: 26upx;
-                  color: $textThirdColor;
+                  color: #999999;
                 }
 
                 img {

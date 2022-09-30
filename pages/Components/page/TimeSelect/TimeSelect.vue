@@ -16,8 +16,8 @@
 </template>
 
 <script setup>
-  import ExpressTimePicker from './components/ExpressTimePicker/ExpressTimePicker'
-  import TimePicker from './components/TimePicker/TimePicker'
+  import ExpressTimePicker from '@/pages/Components/components/ExpressTimePicker/ExpressTimePicker'
+  import TimePicker from '@/pages/Components/components/TimePicker/TimePicker'
   import Title from '@/components/MainUI/Title.vue'
   import Item from '@/components/MainUI/Item.vue'
   
