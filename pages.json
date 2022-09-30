@@ -107,6 +107,20 @@
           "enablePullDownRefresh": false
         }
 
+      }, {
+        "path": "Button/Button",
+        "style": {
+          "navigationBarTitleText": "Button",
+          "enablePullDownRefresh": false
+        }
+
+      }, {
+        "path": "Loading/Loading",
+        "style": {
+          "navigationBarTitleText": "Loading",
+          "enablePullDownRefresh": false
+        }
+
       }
     ]
   }],
