@@ -12,5 +12,8 @@ export default {
   },
   LucyWheel:{},
   LuckyMoney:{},
-  Loading:{}
+  Loading:{},
+  EChart:{
+    include: ['Line','column']
+  }
 }

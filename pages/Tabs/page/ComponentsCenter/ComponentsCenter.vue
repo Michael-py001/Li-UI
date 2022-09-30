@@ -20,7 +20,7 @@
     <view class="box">
       <Title name="图表组件"></Title>
       <Item name="antv F2 蚂蚁图表" url="Components.F2Chart"></Item>
-      <Item name="echart 百度图表" url="Components.ConfirmPopup"></Item>
+      <Item name="echart 百度图表" url="Components.EChart"></Item>
     </view>
     <view class="box">
       <Title name="活动组件"></Title>

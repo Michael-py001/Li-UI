@@ -121,6 +121,26 @@
           "enablePullDownRefresh": false
         }
 
+      }, {
+        "path": "EChart/EChart",
+        "style": {
+          "navigationBarTitleText": "EChart",
+          "enablePullDownRefresh": false
+        }
+      },
+      {
+        "path": "EChart/include/Line",
+        "style": {
+          "navigationBarTitleText": "折线图",
+          "enablePullDownRefresh": false
+        }
+      },
+      {
+        "path": "EChart/include/column",
+        "style": {
+          "navigationBarTitleText": "柱状图",
+          "enablePullDownRefresh": false
+        }
       }
     ]
   }],
