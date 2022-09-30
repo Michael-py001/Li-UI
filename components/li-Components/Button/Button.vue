@@ -101,90 +101,9 @@
 			color: #FFFFFF;
 		}
 
-		&.primaryTransparent {
-			border: 1rpx solid #c7defc;
-			background: rgba(199, 222, 252, .5);
-			font-size: 30rpx !important;
-			color: #FF6047;
-		}
-
-		&.cancel {
-			background: #d1d1d1;
-			color: #ffffff;
-		}
-    &.cancle2 {
-      background: #fff;
-      border: 2rpx solid #f73e3e;
-      color: #f73e3e;
-    }
-    &.cancle3 {
-      background: #fff;
-      border: 2rpx solid #E5E5E5;
-      color: #333333;
-    }
-    &.reject {
-      background: linear-gradient(270deg,#ff7d74, #f73e3e);
-      color: #ffffff;
-    }
-		&.hollow {
-			background-color: transparent;
-			color: #333333;
-			border: 2rpx solid #e5e5e5;
-		}
-
-		&.hollowDdelete {
-			color: #b2b2b2;
-			background-color: transparent;
-			border: none;
-		}
-
-		&.transparent {
-			background-color: transparent;
-			color: #b2b2b2;
-			border: 2rpx solid transparent;
-		}
-
 		&.disabled {
 			background: #c4c4c4;
 			color: #ffffff;
-		}
-
-		&.disabledLogin {
-			background: #c6cfdc;
-			color: #ffffff;
-		}
-
-		&.primary-hollow {
-			background-color: #ffffff;
-			border: 2rpx solid $themeColor;
-			color: $themeColor;
-		}
-
-		&.primary-border {
-			background-color: #F3F8FF;
-			border: 2rpx solid #c7defc;
-			color: #FF6047;
-			font-weight: bold;
-		}
-
-		&.green-border {
-			background-color: #EFFCF9;
-			border: 2rpx solid #a5e5d4;
-			color: #03CB95;
-			font-weight: bold;
-		}
-
-		&.green {
-			background-color: #dcf8f0;
-			border: 2rpx solid #dcf8f0;
-			color: #03cb95;
-			font-weight: bold;
-		}
-
-		&.LogOut {
-			background-color: #F0F0F0;
-			border: none;
-			color: #999999;
 		}
 
 		&.default {
@@ -192,14 +111,6 @@
 			border: 2rpx solid #e5e5e5;
 			color: #333333;
 		}
-
-
-		&.offLine {
-			background: #f6f6f6;
-			border: 2rpx solid #e5e5e5;
-			color: #b2b2b2;
-		}
-
 		// 大小
 		&.lg {
 			height: 80rpx;

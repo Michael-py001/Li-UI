@@ -23,19 +23,12 @@ export  function useNavHeight() {
         }
         // #endif
         statusBarHeight = res.statusBarHeight //状态栏高度
-        console.log("btnInfo--:",btnInfo)
         let btnGapHeight = (btnInfo.top - statusBarHeight) * 2//状态栏到胶囊的间距+胶囊到内容的间距
         // #ifdef MP-WEIXIN
         gapHeight = btnGapHeight<0?8:btnGapHeight
         // #endif
         btnHeight = btnInfo.height, //胶囊高度
-        
         navHeight = gapHeight + btnHeight + statusBarHeight  //导航栏高度
-        console.log("btnGapHeight:",btnGapHeight)
-        console.log("gapHeight:",gapHeight)
-        console.log("btnHeight:",btnHeight)
-        console.log("statusBarHeight:",statusBarHeight)
-        console.log("navHeight:",navHeight)
         resolve()
     	}
     })
