@@ -2,7 +2,8 @@
   <view class="ComponentsCenter">
     <view class="box">
       <Title name="表单组件"></Title>
-      <Item name="Form 表单" url="Components.Form"></Item>
+      <Item name="Button 按钮" url="Components.Button"></Item>
+      <Item name="Form 表单集合" url="Components.Form"></Item>
       <Item name="TimePicker 时间选择器" url="Components.TimeSelect"></Item>
       <Item name="Rate 评分" url="Components.Rate"></Item>
     </view>
@@ -14,6 +15,7 @@
     <view class="box">
       <Title name="反馈组件"></Title>
       <Item name="ConfirmPopup 确认弹窗组件" url="Components.ConfirmPopup"></Item>
+      <Item name="Loading 加载动画" url="Components.Loading"></Item>
     </view>
     <view class="box">
       <Title name="图表组件"></Title>

@@ -1,4 +1,5 @@
 export default {
+  Button:{},
   Form:{},
   TimeSelect:{},
   Tabs:{},
@@ -10,5 +11,6 @@ export default {
     include: ['Pie','Line','column']
   },
   LucyWheel:{},
-  LuckyMoney:{}
+  LuckyMoney:{},
+  Loading:{}
 }
